@@ -1,0 +1,204 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Introduction to Python Programming",
+      "description": "Learn the fundamentals of Python programming language, including syntax, data types, and control structures.",
+      "length": "8 weeks",
+      "teacher": "Dr. Amanda Codington",
+      "review_score": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Web Development with JavaScript and HTML5",
+      "description": "Explore the world of web development using JavaScript and HTML5. Build interactive and dynamic web applications.",
+      "length": "10 weeks",
+      "teacher": "Prof. Jason Scripter",
+      "review_score": 4.2
+    },
+    {
+      "id": 3,
+      "name": "Cybersecurity Fundamentals",
+      "description": "Gain a foundational understanding of cybersecurity, covering topics such as encryption, network security, and ethical hacking.",
+      "length": "12 weeks",
+      "teacher": "Dr. Emily Firewall",
+      "review_score": 4.7
+    },
+    {
+      "id": 4,
+      "name": "Data Science with R Programming",
+      "description": "Dive into data science using the R programming language. Analyze and visualize data to make informed decisions.",
+      "length": "14 weeks",
+      "teacher": "Prof. Ryan Datason",
+      "review_score": 4.4
+    },
+    {
+      "id": 5,
+      "name": "Mobile App Development with React Native",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "length": "10 weeks",
+      "teacher": "Dr. Jessica Mobileson",
+      "review_score": 4.6
+    },
+    {
+      "id": 6,
+      "name": "Database Design and SQL Fundamentals",
+      "description": "Master the art of database design and SQL querying. Learn to design efficient and scalable databases.",
+      "length": "8 weeks",
+      "teacher": "Prof. Maria SQLowski",
+      "review_score": 4.3
+    },
+    {
+      "id": 7,
+      "name": "Cloud Computing Essentials with AWS",
+      "description": "Explore cloud computing principles and practices using Amazon Web Services (AWS). Deploy and manage cloud infrastructure.",
+      "length": "12 weeks",
+      "teacher": "Dr. Alex Cloudman",
+      "review_score": 4.8
+    },
+    {
+      "id": 8,
+      "name": "Machine Learning Foundations with Python",
+      "description": "Delve into the foundations of machine learning using Python. Understand algorithms, models, and predictive analytics.",
+      "length": "14 weeks",
+      "teacher": "Prof. Isaac Learner",
+      "review_score": 4.5
+    },
+    {
+      "id": 9,
+      "name": "Agile Development and Scrum Methodology",
+      "description": "Learn Agile principles and Scrum methodology for efficient software development. Embrace flexibility and collaboration.",
+      "length": "10 weeks",
+      "teacher": "Dr. Sarah Agileton",
+      "review_score": 4.6
+    },
+    {
+      "id": 10,
+      "name": "Networking and TCP/IP Fundamentals",
+      "description": "Understand the basics of networking and TCP/IP protocols. Configure and troubleshoot network infrastructures.",
+      "length": "12 weeks",
+      "teacher": "Prof. Kevin Netmaster",
+      "review_score": 4.4
+    },
+    {
+      "id": 11,
+      "name": "DevOps Practices and Continuous Integration",
+      "description": "Explore DevOps principles and practices. Implement continuous integration and delivery pipelines for software development.",
+      "length": "14 weeks",
+      "teacher": "Dr. Oliver DevOpsman",
+      "review_score": 4.7
+    },
+    {
+      "id": 12,
+      "name": "Big Data Analytics with Hadoop",
+      "description": "Master big data analytics using the Hadoop ecosystem. Process and analyze massive datasets to extract valuable insights.",
+      "length": "16 weeks",
+      "teacher": "Prof. Harper Datahound",
+      "review_score": 4.6
+    },
+    {
+      "id": 13,
+      "name": "UI/UX Design for Web and Mobile Applications",
+      "description": "Learn the principles of user interface (UI) and user experience (UX) design. Design engaging and user-friendly applications.",
+      "length": "10 weeks",
+      "teacher": "Dr. Olivia Designova",
+      "review_score": 4.5
+    },
+    {
+      "id": 14,
+      "name": "Blockchain Technology and Cryptocurrencies",
+      "description": "Explore the fundamentals of blockchain technology and cryptocurrencies. Understand decentralized ledgers and smart contracts.",
+      "length": "12 weeks",
+      "teacher": "Prof. Brian Blockchainer",
+      "review_score": 4.8
+    },
+    {
+      "id": 15,
+      "name": "IT Project Management and Agile Scrum",
+      "description": "Gain essential skills in IT project management using Agile Scrum methodologies. Lead successful software development projects.",
+      "length": "14 weeks",
+      "teacher": "Dr. Pamela Projectmanager",
+      "review_score": 4.4
+    },
+    {
+      "id": 16,
+      "name": "Artificial Intelligence and Machine Learning Applications",
+      "description": "Explore real-world applications of artificial intelligence and machine learning. Develop AI-driven solutions for various industries.",
+      "length": "16 weeks",
+      "teacher": "Prof. AI Enthusiast",
+      "review_score": 4.7
+    },
+    {
+      "id": 17,
+      "name": "Mobile Security and Ethical Hacking",
+      "description": "Learn how to secure mobile applications and devices. Explore ethical hacking techniques to identify and address vulnerabilities.",
+      "length": "12 weeks",
+      "teacher": "Dr. Ethan Ethicalhacker",
+      "review_score": 4.6
+    },
+    {
+      "id": 18,
+      "name": "Data Warehousing and Business Intelligence",
+      "description": "Understand data warehousing concepts and implement business intelligence solutions. Analyze data for strategic decision-making.",
+      "length": "14 weeks",
+      "teacher": "Prof. Diane Databrain",
+      "review_score": 4.5
+    },
+    {
+      "id": 19,
+      "name": "Internet of Things (IoT) Development",
+      "description": "Explore the world of IoT and develop applications for connected devices. Understand protocols, sensors, and IoT architecture.",
+      "length": "10 weeks",
+      "teacher": "Dr. Ian IoTmaster",
+      "review_score": 4.8
+    },
+    {
+      "id": 20,
+      "name": "Linux System Administration",
+      "description": "Gain proficiency in Linux system administration. Learn to manage servers, troubleshoot issues, and implement security measures.",
+      "length": "12 weeks",
+      "teacher": "Prof. Linux Guru",
+      "review_score": 4.4
+    },
+    {
+      "id": 21,
+      "name": "Data Ethics and Privacy in the Digital Age",
+      "description": "Explore ethical considerations in handling and analyzing data. Understand the importance of privacy in the digital era.",
+      "length": "8 weeks",
+      "teacher": "Dr. Ethica Privacyson",
+      "review_score": 4.7
+    },
+    {
+      "id": 22,
+      "name": "Cloud Security and Compliance",
+      "description": "Learn how to secure cloud environments and ensure compliance with industry regulations. Implement best practices in cloud security.",
+      "length": "10 weeks",
+      "teacher": "Prof. Securecloud",
+      "review_score": 4.6
+    },
+    {
+      "id": 23,
+      "name": "Software Testing and Quality Assurance",
+      "description": "Master the principles of software testing and quality assurance. Ensure the reliability and efficiency of software applications.",
+      "length": "12 weeks",
+      "teacher": "Dr. Qualitytester",
+      "review_score": 4.5
+    },
+    {
+      "id": 24,
+      "name": "Digital Marketing for Tech Professionals",
+      "description": "Explore digital marketing strategies tailored for the tech industry. Learn to promote tech products and services effectively.",
+      "length": "8 weeks",
+      "teacher": "Prof. Digital Marketer",
+      "review_score": 4.8
+    },
+    {
+      "id": 25,
+      "name": "Quantum Computing Fundamentals",
+      "description": "Dive into the basics of quantum computing. Understand quantum algorithms and their potential impact on the future of computing.",
+      "length": "14 weeks",
+      "teacher": "Dr. Quantumthinker",
+      "review_score": 4.4
+    }
+  ]
+}

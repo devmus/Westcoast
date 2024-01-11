@@ -1,0 +1,8 @@
+@import "css/reset";
+@import "css/basics";
+@import "css/header";
+@import "css/footer";
+
+@media screen and (min-width: 1024px){
+  @import "css/desktop";
+};
