@@ -1,0 +1,39 @@
+header{
+  height: $header_d;
+}
+
+.logo-container a h1{
+      font-size: 2rem;
+}
+
+.cards-content{
+
+  .cards-container{
+    width: calc(80% + 3rem);
+    margin: 2rem;
+
+    h2{
+      font-size: 2rem;
+    }
+  }
+}
+
+.main-content{
+  flex-direction: row;
+  justify-content: center;
+
+  section{
+    width: calc(40vw);
+
+    h2{
+      font-size: 2rem;
+    }
+  }
+}
+
+.header-right{
+
+  .nav-menu{
+      margin-top: calc($header_d * 2);
+  }
+}

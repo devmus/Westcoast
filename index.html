@@ -3,19 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Miltonian+Tattoo&display=swap" rel="stylesheet">
   <title>Westcoast Education - Home</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <link href="./css/site.min.css" rel="stylesheet">
-  <script src="./js/index.js" type="module" defer></script>
+  <script src="./js/page_index.js" type="module" defer></script>
 </head>
 <body>
   <header>
-    <div id="header-container"></div>
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="index.html"><h1>Westcoast Eduction</h1></a>
+      </div>
+      <div class="header-right">
+        <nav class="navbar">
+          <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-item">
+                <h2>Meny</h2>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
   <main>
-    <div id="main-container"></div>
+    <article class="cards-content">
+      <div class="cards-container">
+        <h2>Kurser med högst omdöme just nu:</h2>
+        <section class="course-card"><a><div id="course1"></div></a>
+        </section>
+        <section class="course-card"><a><div id="course2"></div></a>
+        </section>
+        <section class="course-card"><a><div id="course3"></div></a>
+        </section>
+        <section class="course-card"><a><div id="course4"></div></a>
+        </section>
+        <section class="course-card"><a><div id="course5"></div></a>
+        </section>
+      </div>
+    </article>
+    <article class="main-content">
+      <section>
+        <a href="./html/allakurser.html">
+          <div class="background-img-allakurser">
+            <h2>Alla våra kurser</h2>
+          </div>
+        </a>
+      </section>
+      <section>
+        <a href="./html/anmalan.html">
+          <div class="background-img-anmalan">
+            <h2>Anmälan till kurser</h2>
+          </div>
+        </a>
+      </section>
+      <section>
+        <a href="./html/minasidor.html">
+          <div class="background-img-minasidor">
+            <h2>Mina sidor (studenter)</h2>
+          </div>
+        </a>
+      </section>
+      <section>
+        <a href="./html/admin.html"> 
+          <div class="background-img-admin">
+            <h2>Administration (lärare)</h2>
+          </div>
+        </a>
+      </section>
+    </article>
   </main>
   <footer>
-    <div id="footer-container"></div>
+    <div class="footer-container">
+    </div>
   </footer>
 </body>
 </html>

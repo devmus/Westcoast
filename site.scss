@@ -1,7 +1,10 @@
 @import "css/reset";
 @import "css/basics";
 @import "css/header";
+@import "css/main";
 @import "css/footer";
+@import "css/cards";
+
 
 @media screen and (min-width: 1024px){
   @import "css/desktop";
