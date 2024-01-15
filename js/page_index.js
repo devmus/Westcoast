@@ -8,7 +8,7 @@ const initPage = async () => {
   bestCourses.forEach((index) => {
     createCard(
       index.id,
-      index.name,
+      index.course_name,
       index.description,
       index.length,
       index.teacher,

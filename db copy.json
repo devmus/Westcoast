@@ -1,6 +1,14 @@
 {
   "courses": [
     {
+      "id": "1",
+      "course_name": "Introduction to Python Programming",
+      "description": "Learn the fundamentals of Python programming language, including syntax, data types, and control structures.",
+      "courselength": "8 weeks",
+      "teacher": "Dr. Amanda Codington",
+      "review_score": "4.5"
+    },
+    {
       "id": "2",
       "course_name": "Web Development with JavaScript and HTML5",
       "description": "Explore the world of web development using JavaScript and HTML5. Build interactive and dynamic web applications.",
@@ -9,28 +17,52 @@
       "review_score": "4.2"
     },
     {
+      "id": "3",
+      "course_name": "Cybersecurity Fundamentals",
+      "description": "Gain a foundational understanding of cybersecurity, covering topics such as encryption, network security, and ethical hacking.",
+      "courselength": "12 weeks",
+      "teacher": "Dr. Emily Firewall",
+      "review_score": "4.7"
+    },
+    {
+      "id": "4",
       "course_name": "Data Science with R Programming",
       "description": "Dive into data science using the R programming language. Analyze and visualize data to make informed decisions.",
       "courselength": "14 weeks",
       "teacher": "Prof. Ryan Datason",
-      "review_score": "4.0",
-      "id": "4"
+      "review_score": "4.4"
     },
     {
+      "id": "5",
+      "course_name": "Mobile App Development with React Native",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "courselength": "10 weeks",
+      "teacher": "Dr. Jessica Mobileson",
+      "review_score": "5.0"
+    },
+    {
+      "id": "6",
       "course_name": "Database Design and SQL Fundamentals",
       "description": "Master the art of database design and SQL querying. Learn to design efficient and scalable databases.",
-      "courselength": "7 weeks",
+      "courselength": "8 weeks",
       "teacher": "Prof. Maria SQLowski",
-      "review_score": "4.3",
-      "id": "6"
+      "review_score": "4.3"
     },
     {
+      "id": "7",
       "course_name": "Cloud Computing Essentials with AWS",
       "description": "Explore cloud computing principles and practices using Amazon Web Services (AWS). Deploy and manage cloud infrastructure.",
-      "courselength": "14 weeks",
+      "courselength": "12 weeks",
       "teacher": "Dr. Alex Cloudman",
-      "review_score": "4.7",
-      "id": "7"
+      "review_score": "4.8"
+    },
+    {
+      "id": "8",
+      "course_name": "Machine Learning Foundations with Python",
+      "description": "Delve into the foundations of machine learning using Python. Understand algorithms, models, and predictive analytics.",
+      "courselength": "14 weeks",
+      "teacher": "Prof. Isaac Learner",
+      "review_score": "4.9"
     },
     {
       "id": "9",
@@ -105,6 +137,14 @@
       "review_score": "4.6"
     },
     {
+      "id": "18",
+      "course_name": "Data Warehousing and Business Intelligence",
+      "description": "Understand data warehousing concepts and implement business intelligence solutions. Analyze data for strategic decision-making.",
+      "courselength": "14 weeks",
+      "teacher": "Prof. Diane Databrain",
+      "review_score": "4.5"
+    },
+    {
       "id": "19",
       "course_name": "Internet of Things (IoT) Development",
       "description": "Explore the world of IoT and develop applications for connected devices. Understand protocols, sensors, and IoT architecture.",
@@ -135,6 +175,30 @@
       "courselength": "10 weeks",
       "teacher": "Prof. Securecloud",
       "review_score": "4.6"
+    },
+    {
+      "id": "23",
+      "course_name": "Software Testing and Quality Assurance",
+      "description": "Master the principles of software testing and quality assurance. Ensure the reliability and efficiency of software applications.",
+      "courselength": "12 weeks",
+      "teacher": "Dr. Qualitytester",
+      "review_score": "4.5"
+    },
+    {
+      "id": "24",
+      "course_name": "Digital Marketing for Tech Professionals",
+      "description": "Explore digital marketing strategies tailored for the tech industry. Learn to promote tech products and services effectively.",
+      "courselength": "8 weeks",
+      "teacher": "Prof. Digital Marketer",
+      "review_score": "4.8"
+    },
+    {
+      "id": "25",
+      "course_name": "Quantum Computing Fundamentals",
+      "description": "Dive into the basics of quantum computing. Understand quantum algorithms and their potential impact on the future of computing.",
+      "courselength": "14 weeks",
+      "teacher": "Dr. Quantumthinker",
+      "review_score": "4.4"
     }
   ]
 }

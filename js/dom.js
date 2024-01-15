@@ -42,13 +42,17 @@ const initDOM = () => {
   navMenu();
 };
 
-const createCard = (id, name, description, length, teacher, review_score) => {
+const createCard = (
+  id,
+  course_name,
+  description,
+  courselength,
+  teacher,
+  review_score
+) => {
   const title = document.title;
-  console.log(title);
-
   const cardsContainer = document.querySelector('.cards-container');
   const createSection = document.createElement('section');
-
   cardsContainer.appendChild(createSection);
   const createLink = document.createElement('a');
   createSection.appendChild(createLink);
@@ -58,10 +62,15 @@ const createCard = (id, name, description, length, teacher, review_score) => {
   createDiv.appendChild(cardContent);
   if (title === 'Westcoast Education - Home') {
     createSection.classList.add('course-card', 'card-best');
-    cardContent.innerText = `Kurs: ${name}\n Lärare: ${teacher}\n Omdöme: ${review_score}`;
+    cardContent.innerText = `Kurs: ${course_name}\n Lärare: ${teacher}\n Omdöme: ${review_score}`;
   } else if (title === 'Westcoast Education - Alla kurser') {
     createSection.classList.add('course-card', 'card-all');
-    cardContent.innerText = `Kurs: ${name}\n Lärare: ${teacher}\n Längd: ${length}`;
+    cardContent.innerText = `Kurs: ${course_name}\n Lärare: ${teacher}\n Längd: ${courselength}`;
+  } else if (title === 'Westcoast Education - Administration') {
+    createSection.classList.add('course-card', 'card-admin');
+    cardContent.innerText = `id: ${id}\n Kurs: ${course_name} - ${description}\n Lärare: ${teacher}\n Längd: ${courselength}`;
+    createDiv.setAttribute('kursid', `${id}`);
+    createLink.setAttribute('href', `../html/admin-edit.html?id=${id}`);
   }
 };
 

@@ -15,10 +15,9 @@
     width: 100%;
 
     h1{
-      font-family: Inter;
       font-size: 1rem;
       padding: 10px;
-      border: 1px solid black;
+      border: 1px solid $border-color;
       border-radius: 50px;
       background-color: $secondary-color;
       text-align: center;

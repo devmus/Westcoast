@@ -35,6 +35,10 @@ textarea {
   white-space: revert;
 }
 
+* {
+  font-family: Inter;
+}
+
 body {
   min-height: 100vh;
   background-image: url("../assets/background.webp");
@@ -79,10 +83,9 @@ a {
   width: 100%;
 }
 .logo-container a h1 {
-  font-family: Inter;
   font-size: 1rem;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid rgb(58, 58, 58);
   border-radius: 50px;
   background-color: rgb(227, 228, 216);
   text-align: center;
@@ -260,6 +263,7 @@ a {
 }
 .cards-content .cards-container .course-card {
   border-bottom: 1px solid black;
+  padding: 0.2rem;
 }
 .cards-content .cards-container .course-card:last-child {
   border-bottom: 0;
@@ -269,6 +273,72 @@ a {
 }
 .cards-content .course-card:nth-child(odd) {
   background-color: rgb(227, 228, 216);
+}
+
+.button-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.button-list li {
+  width: 10rem;
+  padding: 20px;
+  margin: 0 10px;
+  border: 1px solid rgb(58, 58, 58);
+  border-radius: 50px;
+  background-color: rgb(227, 228, 216);
+  text-align: center;
+}
+
+.form-control .btn {
+  padding: 0.63rem;
+  border: 1px solid rgb(58, 58, 58);
+  background-color: rgb(188, 255, 252);
+  cursor: pointer;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-danger {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  padding: 0.63rem;
+  border: 1px solid rgb(58, 58, 58);
+  background-color: rgba(255, 133, 133, 0.5);
+  cursor: pointer;
+}
+
+form {
+  padding: 0 2rem;
+  margin: 1rem 1rem;
+  background-color: rgb(246, 250, 211);
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input,
+textarea {
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 0.63rem;
+  border: solid 1px rgb(58, 58, 58);
+  background-color: rgb(227, 228, 216);
+}
+
+.form-control:last-child {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media screen and (min-width: 1024px) {
