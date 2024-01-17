@@ -13,12 +13,14 @@ const addCourse = async (e) => {
   const course = new FormData(form);
   const obj = convertFormDataToJson(course);
   saveCourse(obj);
+  console.log(obj);
 };
 
 const saveCourse = async (course) => {
-  const url = 'http://localhost:3000/course';
+  const url = 'http://localhost:3000/courses';
   const http = new HttpClient(url);
   await http.add(course);
+  // location.href = './admin.html';
 };
 
 document.addEventListener('DOMContentLoaded', initPage);

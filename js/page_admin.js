@@ -4,6 +4,7 @@ import { loadCourses } from './courses.js';
 const initPage = async () => {
   initDOM();
   const adminCourses = await loadCourses();
+  console.log(adminCourses);
 
   adminCourses.forEach((index) => {
     createCard(

@@ -10,7 +10,7 @@ const initPage = async () => {
       index.id,
       index.course_name,
       index.description,
-      index.length,
+      index.courselength,
       index.teacher,
       index.review_score
     );

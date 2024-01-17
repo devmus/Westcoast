@@ -1,0 +1,40 @@
+$primary-color: rgb(246, 250, 211);
+$secondary-color: rgb(227, 228, 216);
+$tertiary-color: rgb(188, 255, 252);
+$border-color: rgb(58, 58, 58);
+$transparent-color: rgba(0,0,0,0.5);
+$warning-color: rgba(255, 133, 133, 0.5);
+$header_m: 62px;
+$header_d: 81px;
+
+*{
+  font-family: Inter;
+}
+
+body{
+  min-height: 100vh;
+  background-image: url("/assets/images/background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  height: $header_m;
+}
+
+main{
+  // position: relative;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+footer{
+  height: 80px;
+}
+
+a{
+  cursor: pointer;
+}

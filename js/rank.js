@@ -16,3 +16,5 @@ const rankCourses = async () => {
 };
 
 export { rankCourses };
+
+console.log('rank imported');

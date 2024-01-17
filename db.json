@@ -1,140 +1,70 @@
 {
-  "courses": [
+  "kurser": [
     {
-      "id": "2",
-      "course_name": "Web Development with JavaScript and HTML5",
-      "description": "Explore the world of web development using JavaScript and HTML5. Build interactive and dynamic web applications.",
-      "courselength": "10 weeks",
-      "teacher": "Prof. Jason Scripter",
-      "review_score": "4.2"
+      "id": 1,
+      "kurstitel": "Introduction to Python Programming",
+      "beskrivning": "Learn the fundamentals of Python programming language, including syntax, data types, and control structures.",
+      "omdome": 2.5,
+      "kursdagar": "30 dagar",
+      "kursstart": "2024-02-20",
+      "kursnummer": "",
+      "distans": false,
+      "bild": "../assets/images/admin.webp"
     },
     {
-      "course_name": "Data Science with R Programming",
-      "description": "Dive into data science using the R programming language. Analyze and visualize data to make informed decisions.",
-      "courselength": "14 weeks",
-      "teacher": "Prof. Ryan Datason",
-      "review_score": "4.0",
-      "id": "4"
+      "id": 2,
+      "kurstitel": "Web Development with JavaScript and HTML5",
+      "beskrivning": "Explore the world of web development using JavaScript and HTML5. Build interactive and dynamic web applications.",
+      "omdome": 2.5,
+      "kursdagar": "60 dagar",
+      "kursstart": "2024-05-18",
+      "kursnummer": "",
+      "distans": true,
+      "bild":"../assets/images/admin.webp"
     },
     {
-      "course_name": "Database Design and SQL Fundamentals",
-      "description": "Master the art of database design and SQL querying. Learn to design efficient and scalable databases.",
-      "courselength": "7 weeks",
-      "teacher": "Prof. Maria SQLowski",
-      "review_score": "4.3",
-      "id": "6"
+      "id": 3,
+      "kurstitel": "Cybersecurity Fundamentals",
+      "beskrivning": "Gain a foundational understanding of cybersecurity, covering topics such as encryption, network security, and ethical hacking.",
+      "omdome": 2.5,
+      "kursdagar": "120 dagar",
+      "kursstart": "2024-06-18",
+      "kursnummer": "",
+      "distans": false,
+      "bild":"../assets/images/admin.webp"
     },
     {
-      "course_name": "Cloud Computing Essentials with AWS",
-      "description": "Explore cloud computing principles and practices using Amazon Web Services (AWS). Deploy and manage cloud infrastructure.",
-      "courselength": "14 weeks",
-      "teacher": "Dr. Alex Cloudman",
-      "review_score": "4.7",
-      "id": "7"
+      "id": 4,
+      "kurstitel": "Data Science with R Programming",
+      "beskrivning": "Dive into data science using the R programming language. Analyze and visualize data to make informed decisions.",
+      "omdome": 2.5,
+      "kursdagar": "95 dagar",
+      "kursstart": "2024-03-18",
+      "kursnummer": "",
+      "distans": true,
+      "bild":"../assets/images/admin.webp"
     },
     {
-      "id": "9",
-      "course_name": "Agile Development and Scrum Methodology",
-      "description": "Learn Agile principles and Scrum methodology for efficient software development. Embrace flexibility and collaboration.",
-      "courselength": "10 weeks",
-      "teacher": "Dr. Sarah Agileton",
-      "review_score": "4.6"
+      "id": 5,
+      "kurstitel": "Mobile App Development with React Native",
+      "beskrivning": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "omdome": 2.5,
+      "kursdagar": "60 dagar",
+      "kursstart": "2024-02-18",
+      "kursnummer": "",
+      "distans": false,
+      "bild":"../assets/images/admin.webp"
     },
     {
-      "id": "10",
-      "course_name": "Networking and TCP/IP Fundamentals",
-      "description": "Understand the basics of networking and TCP/IP protocols. Configure and troubleshoot network infrastructures.",
-      "courselength": "12 weeks",
-      "teacher": "Prof. Kevin Netmaster",
-      "review_score": "4.4"
-    },
-    {
-      "id": "11",
-      "course_name": "DevOps Practices and Continuous Integration",
-      "description": "Explore DevOps principles and practices. Implement continuous integration and delivery pipelines for software development.",
-      "courselength": "14 weeks",
-      "teacher": "Dr. Oliver DevOpsman",
-      "review_score": "4.7"
-    },
-    {
-      "id": "12",
-      "course_name": "Big Data Analytics with Hadoop",
-      "description": "Master big data analytics using the Hadoop ecosystem. Process and analyze massive datasets to extract valuable insights.",
-      "courselength": "16 weeks",
-      "teacher": "Prof. Harper Datahound",
-      "review_score": "4.6"
-    },
-    {
-      "id": "13",
-      "course_name": "UI/UX Design for Web and Mobile Applications",
-      "description": "Learn the principles of user interface (UI) and user experience (UX) design. Design engaging and user-friendly applications.",
-      "courselength": "10 weeks",
-      "teacher": "Dr. Olivia Designova",
-      "review_score": "4.5"
-    },
-    {
-      "id": "14",
-      "course_name": "Blockchain Technology and Cryptocurrencies",
-      "description": "Explore the fundamentals of blockchain technology and cryptocurrencies. Understand decentralized ledgers and smart contracts.",
-      "courselength": "12 weeks",
-      "teacher": "Prof. Brian Blockchainer",
-      "review_score": "4.6"
-    },
-    {
-      "id": "15",
-      "course_name": "IT Project Management and Agile Scrum",
-      "description": "Gain essential skills in IT project management using Agile Scrum methodologies. Lead successful software development projects.",
-      "courselength": "14 weeks",
-      "teacher": "Dr. Pamela Projectmanager",
-      "review_score": "4.4"
-    },
-    {
-      "id": "16",
-      "course_name": "Artificial Intelligence and Machine Learning Applications",
-      "description": "Explore real-world applications of artificial intelligence and machine learning. Develop AI-driven solutions for various industries.",
-      "courselength": "16 weeks",
-      "teacher": "Prof. AI Enthusiast",
-      "review_score": "4.7"
-    },
-    {
-      "id": "17",
-      "course_name": "Mobile Security and Ethical Hacking",
-      "description": "Learn how to secure mobile applications and devices. Explore ethical hacking techniques to identify and address vulnerabilities.",
-      "courselength": "12 weeks",
-      "teacher": "Dr. Ethan Ethicalhacker",
-      "review_score": "4.6"
-    },
-    {
-      "id": "19",
-      "course_name": "Internet of Things (IoT) Development",
-      "description": "Explore the world of IoT and develop applications for connected devices. Understand protocols, sensors, and IoT architecture.",
-      "courselength": "10 weeks",
-      "teacher": "Dr. Ian IoTmaster",
-      "review_score": "4.7"
-    },
-    {
-      "id": "20",
-      "course_name": "Linux System Administration",
-      "description": "Gain proficiency in Linux system administration. Learn to manage servers, troubleshoot issues, and implement security measures.",
-      "courselength": "12 weeks",
-      "teacher": "Prof. Linux Guru",
-      "review_score": "4.4"
-    },
-    {
-      "id": "21",
-      "course_name": "Data Ethics and Privacy in the Digital Age",
-      "description": "Explore ethical considerations in handling and analyzing data. Understand the importance of privacy in the digital era.",
-      "courselength": "8 weeks",
-      "teacher": "Dr. Ethica Privacyson",
-      "review_score": "4.7"
-    },
-    {
-      "id": "22",
-      "course_name": "Cloud Security and Compliance",
-      "description": "Learn how to secure cloud environments and ensure compliance with industry regulations. Implement best practices in cloud security.",
-      "courselength": "10 weeks",
-      "teacher": "Prof. Securecloud",
-      "review_score": "4.6"
+      "id": 6,
+      "kurstitel": "Mobile App Development with React Native",
+      "beskrivning": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "omdome": 2.5,
+      "kursdagar": "60 dagar",
+      "kursstart": "2024-02-18",
+      "kursnummer": "",
+      "distans": false,
+      "bild":"../assets/images/admin.webp"
     }
   ]
 }

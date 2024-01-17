@@ -1,13 +1,13 @@
-@import "css/reset";
-@import "css/basics";
-@import "css/header";
-@import "css/main";
-@import "css/footer";
-@import "css/cards";
-@import "css/button";
-@import "css/form";
+@import "assets/css/reset";
+@import "assets/css/basics";
+@import "assets/css/header";
+@import "assets/css/main";
+@import "assets/css/footer";
+@import "assets/css/cards";
+@import "assets/css/button";
+@import "assets/css/form";
 
 
 @media screen and (min-width: 1024px){
-  @import "css/desktop";
+  @import "assets/css/desktop";
 };

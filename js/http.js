@@ -20,9 +20,11 @@ class HttpClient {
 
   async add(data) {
     try {
+      console.log(JSON.stringify(data));
+
       const response = await fetch(this.#url, {
         method: 'POST',
-        header: {
+        headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
