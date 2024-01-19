@@ -3,12 +3,13 @@ export default class Course {
   #title = '';
   #description = '';
   #review = '';
-  #length = '';
-  #startDate = '';
+  #days = '';
+  #start = '';
   #price;
   #number = '';
   #remote = false;
   #image = '';
+  #teacher = '';
   #students = [];
 
   constructor(
@@ -16,24 +17,26 @@ export default class Course {
     title,
     description,
     review,
-    length,
-    startDate,
+    days,
+    start,
     price,
     number,
     remote,
     image,
+    teacher,
     students
   ) {
     this.#id = id;
     this.#title = title;
     this.#description = description;
     this.#review = review;
-    this.#length = length;
-    this.#startDate = startDate;
+    this.#days = days;
+    this.#start = start;
     this.#price = price;
     this.#number = number;
     this.#remote = remote;
     this.#image = image;
+    this.#teacher = teacher;
     this.#students = students;
   }
 
@@ -53,12 +56,12 @@ export default class Course {
     return this.#review;
   }
 
-  get length() {
-    return this.#length;
+  get days() {
+    return this.#days;
   }
 
-  get startDate() {
-    return this.#startDate;
+  get start() {
+    return this.#start;
   }
 
   get price() {
@@ -66,7 +69,22 @@ export default class Course {
   }
 
   get number() {
-    return this.#number;
+    const firstNo = () => {
+      if (this.#remote === 'true') {
+        return 0;
+      } else {
+        return 1;
+      }
+    };
+
+    const secondNo = () => {
+      const date = new Date(this.#start);
+      const month = date.getMonth();
+
+      return month;
+    };
+
+    return `${firstNo()}0.9${secondNo()}.${this.#id}`;
   }
 
   get remote() {
@@ -75,6 +93,10 @@ export default class Course {
 
   get image() {
     return this.#image;
+  }
+
+  get teacher() {
+    return this.#teacher;
   }
 
   get students() {

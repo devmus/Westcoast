@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
   <link href="../assets/css/site.min.css" rel="stylesheet">
-  <script src="../js/page_admin-edit.js" type="module" defer></script>
+  <script src="../lib/app.js" type="module" defer></script>
 </head>
 <body>
   <header>
@@ -43,15 +43,15 @@
       </ul>
     </div>
     <article class="cards-content">
-      <div class="cards-container">
+      <div class="cards-container background-transparent">
         <h2>Redigera kurs</h2>
         <form id="updateCourseForm">
           <div class="form-control">
-            <label for="course_name">Kursnamn</label>
+            <label for="title">Kursnamn</label>
             <input
               type="text"
-              name="course_name"
-              id="course_name"
+              name="title"
+              id="title"
               placeholder="Ange kursnamn" />
           </div>
           <div class="form-control">
@@ -63,12 +63,44 @@
               rows="10"></textarea>
           </div>
           <div class="form-control">
-            <label for="courselength">Kurslängd</label>
+            <label for="days">Kurslängd</label>
             <input
               type="text"
-              name="courselength"
-              id="courselength"
+              name="days"
+              id="days"
               placeholder="Antal veckor" />
+          </div>
+          <div class="form-control">
+            <label for="start">Kursstart</label>
+            <input
+              type="text"
+              name="start"
+              id="start"
+              placeholder="Antal veckor" />
+          </div>
+          <div class="form-control">
+            <label for="price">Pris</label>
+            <input
+              type="text"
+              name="price"
+              id="price"
+              placeholder="Titel. Förnamn Efternamn" />
+          </div>
+          <div class="form-control">
+            <label for="remote">Distans</label>
+            <input
+              type="text"
+              name="remote"
+              id="remote"
+              placeholder=""/>
+          </div>
+          <div class="form-control">
+            <label for="image">Bild sökväg</label>
+            <input
+              type="text"
+              name="image"
+              id="image"
+              placeholder=""/>
           </div>
           <div class="form-control">
             <label for="teacher">Lärare</label>
@@ -76,15 +108,7 @@
               type="text"
               name="teacher"
               id="teacher"
-              placeholder="Titel. Förnamn Efternamn" />
-          </div>
-          <div class="form-control">
-            <label for="review_score">Omdöme</label>
-            <input
-              type="text"
-              name="review_score"
-              id="review_score"
-              placeholder="1-5" />
+              placeholder=""/>
           </div>
           <div class="form-control">
             <button
@@ -94,14 +118,30 @@
             </button>
           </div>
         </form>
+        <div class="course-extra-info-container">
+          <h3>Extra information</h3>
+          <div class="extra-info-div">
+            <label for="teacher">Registrerade Studenter</label>
+            <span class="course-extra-info"></span>
+          </div>
+          <div class="extra-info-div">
+            <label for="teacher">Antal Studenter</label>
+            <span class="course-extra-info"></span>
+          </div>
+            <div class="extra-info-div">
+            <label for="teacher">Kursens omdöme</label>
+            <span class="course-extra-info"></span>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button id="delete"
+          class="btn btn-danger">
+          Radera kurs
+          </button>
+        </div>
       </div>
     </article>
-    <div class="btn-container">
-      <button id="delete"
-      class="btn btn-danger">
-      Radera kurs
-      </button>
-    </div>
+
     <article class="main-content">
     </article>
   </main>

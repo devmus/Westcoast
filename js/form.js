@@ -4,5 +4,3 @@ const convertFormDataToJson = (formData) => {
 };
 
 export { convertFormDataToJson };
-
-console.log('form exported');

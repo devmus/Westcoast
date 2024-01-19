@@ -3,8 +3,9 @@ $secondary-color: rgb(227, 228, 216);
 $tertiary-color: rgb(188, 255, 252);
 $border-color: rgb(58, 58, 58);
 $transparent-color: rgba(0,0,0,0.6);
+$transparent-color-light: rgba(0,0,0,0.3);
 $transparent-color-discover: rgba(145, 83, 83, 0.9);
-$warning-color: rgba(255, 133, 133, 0.5);
+$warning-color: rgba(255, 133, 133, 1);
 $header_m: 62px;
 $header_d: 81px;
 $font-color: white;
@@ -40,4 +41,8 @@ footer{
 
 a{
   cursor: pointer;
+}
+
+.background-transparent{
+  background-color: $transparent-color-light;
 }

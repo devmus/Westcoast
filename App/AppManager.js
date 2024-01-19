@@ -20,6 +20,7 @@ export default class AppManager {
           course.number,
           course.remote,
           course.image,
+          course.teacher,
           course.students
         );
       });
@@ -46,5 +47,15 @@ export default class AppManager {
     );
     let limitCourses = courses.slice(0, 5);
     return limitCourses;
+  }
+
+  async editCourse(id) {
+    try {
+      const http = new HttpClient();
+      const result = await http.get(`courses/${id}`);
+      return result;
+    } catch (error) {
+      throw error;
+    }
   }
 }
