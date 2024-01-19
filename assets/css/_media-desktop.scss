@@ -1,9 +1,37 @@
+//**********************************************//
+//******************* Header *******************//
+//**********************************************//
 header{
   height: $header_d;
 }
 
 .logo-container a h1{
       font-size: 2rem;
+}
+
+.header-right{
+
+  .nav-menu{
+      margin-top: calc($header_d * 2);
+
+      li{
+        font-size: 2rem;
+      }
+  }
+}
+
+//**********************************************//
+//******************** Main ********************//
+//**********************************************//
+
+.button-list{
+  
+  li{
+    width: 10rem;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 50px;
+  }
 }
 
 .cards-content{
@@ -43,6 +71,8 @@ header{
   }
 }
 
+
+
 .main-content{
   flex-direction: row;
   justify-content: center;
@@ -57,13 +87,3 @@ header{
   }
 }
 
-.header-right{
-
-  .nav-menu{
-      margin-top: calc($header_d * 2);
-
-      li{
-        font-size: 2rem;
-      }
-  }
-}

@@ -1,69 +1,83 @@
-export default class Kurs {
+export default class Course {
   #id = 0;
-  #kurstitel = '';
-  #beskrivning = '';
-  #omdome = '';
-  #kursdagar = '';
-  #kursstart = '';
-  #kursnummer = '';
-  #distans = false;
-  #bild = [];
+  #title = '';
+  #description = '';
+  #review = '';
+  #length = '';
+  #startDate = '';
+  #price;
+  #number = '';
+  #remote = false;
+  #image = '';
+  #students = [];
 
   constructor(
     id,
-    kurstitel,
-    beskrivning,
-    omdome,
-    kursdagar,
-    kursstart,
-    kursnummer,
-    distans,
-    bild
+    title,
+    description,
+    review,
+    length,
+    startDate,
+    price,
+    number,
+    remote,
+    image,
+    students
   ) {
     this.#id = id;
-    this.#kurstitel = kurstitel;
-    this.#beskrivning = beskrivning;
-    this.#omdome = omdome;
-    this.#kursdagar = kursdagar;
-    this.#kursstart = kursstart;
-    this.#kursnummer = kursnummer;
-    this.#distans = distans;
-    this.#bild = bild;
+    this.#title = title;
+    this.#description = description;
+    this.#review = review;
+    this.#length = length;
+    this.#startDate = startDate;
+    this.#price = price;
+    this.#number = number;
+    this.#remote = remote;
+    this.#image = image;
+    this.#students = students;
   }
 
   get id() {
     return this.#id;
   }
 
-  get kurstitel() {
-    return this.#kurstitel;
+  get title() {
+    return this.#title;
   }
 
-  get beskrivning() {
-    return this.#beskrivning;
+  get description() {
+    return this.#description;
   }
 
-  get omdome() {
-    return this.#omdome;
+  get review() {
+    return this.#review;
   }
 
-  get kursdagar() {
-    return this.#kursdagar;
+  get length() {
+    return this.#length;
   }
 
-  get kursstart() {
-    return this.#kursstart;
+  get startDate() {
+    return this.#startDate;
   }
 
-  get kursnummer() {
-    return this.#kursnummer;
+  get price() {
+    return this.#price;
   }
 
-  get distans() {
-    return this.#distans;
+  get number() {
+    return this.#number;
   }
 
-  get bild() {
-    return this.#bild;
+  get remote() {
+    return this.#remote;
+  }
+
+  get image() {
+    return this.#image;
+  }
+
+  get students() {
+    return this.#students;
   }
 }

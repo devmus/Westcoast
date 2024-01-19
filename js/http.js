@@ -7,6 +7,7 @@ class HttpClient {
   async get() {
     try {
       const response = await fetch(this.#url);
+      // console.log(response);
       if (response.ok) {
         const result = await response.json();
         return result;

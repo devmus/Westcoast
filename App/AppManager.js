@@ -1,31 +1,35 @@
-import Kurs from '../Models/Course.js';
+import Course from '../Models/Course.js';
 import { HttpClient } from '../lib/https.js';
 
 export default class AppManager {
   async rankCourses() {
     try {
       const http = new HttpClient();
-      const result = await http.get('kurser');
+      const result = await http.get('courses');
+      console.log(result);
 
-      const kurser = result.map((kurs) => {
-        return new Kurs(
-          kurs.id,
-          kurs.kurstitel,
-          kurs.beskrivning,
-          kurs.omdome,
-          kurs.kursdagar,
-          kurs.kursstart,
-          kurs.kursnummer,
-          kurs.distans,
-          kurs.bild
+      const course = result.map((course) => {
+        return new Course(
+          course.id,
+          course.title,
+          course.description,
+          course.review,
+          course.days,
+          course.start,
+          course.price,
+          course.number,
+          course.remote,
+          course.image,
+          course.students
         );
       });
 
-      kurser.sort((a, b) => parseFloat(b.omdome) - parseFloat(a.omdome));
+      course.sort((a, b) => parseFloat(b.review) - parseFloat(a.review));
 
-      let rankadeKurser = kurser.slice(0, 5);
+      let bestCourses = course.slice(0, 5);
+      console.log(bestCourses);
 
-      return rankadeKurser;
+      return bestCourses;
     } catch (error) {
       throw error;
     }

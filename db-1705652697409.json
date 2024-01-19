@@ -21,9 +21,10 @@
       "number": "",
       "remote": false,
       "image": "../assets/images/kursbilder/",
-      "students": 
-      {"student_names":[], 
-      "student_count": 0}
+      "students": {
+        "student_names": [],
+        "student_count": 0
+      }
     },
     {
       "id": 2,
@@ -35,10 +36,11 @@
       "price": 100,
       "number": "",
       "remote": true,
-      "image":"../assets/images/kursbilder/",
-      "students": 
-      {"student_names":[], 
-      "student_count": 0}
+      "image": "../assets/images/kursbilder/",
+      "students": {
+        "student_names": [],
+        "student_count": 0
+      }
     },
     {
       "id": 3,
@@ -50,40 +52,43 @@
       "price": 100,
       "number": "",
       "remote": false,
-      "image":"../assets/images/kursbilder/",
-      "students": 
-      {"student_names":[], 
-      "student_count": 0}
+      "image": "../assets/images/kursbilder/",
+      "students": {
+        "student_names": [],
+        "student_count": 0
+      }
     },
     {
       "id": 4,
       "title": "Data Science with R Programming",
       "description": "Dive into data science using the R programming language. Analyze and visualize data to make informed decisions.",
-      "review": 4.0,
+      "review": 4,
       "days": "95 dagar",
       "start": "2024-03-18",
       "price": 100,
       "number": "",
       "remote": true,
-      "image":"../assets/images/kursbilder/",
-      "students": 
-      {"student_names":[], 
-      "student_count": 0}
+      "image": "../assets/images/kursbilder/",
+      "students": {
+        "student_names": [],
+        "student_count": 0
+      }
     },
     {
       "id": 5,
       "title": "Mobile App Development with React Native",
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
-      "review": 5.0,
+      "review": 5,
       "days": "60 dagar",
       "start": "2024-02-18",
       "price": 100,
       "number": "",
       "remote": false,
-      "image":"../assets/images/kursbilder/",
-      "students": 
-      {"student_names":[], 
-      "student_count": 0}
+      "image": "../assets/images/kursbilder/",
+      "students": {
+        "student_names": [],
+        "student_count": 0
+      }
     },
     {
       "id": 6,
@@ -95,10 +100,11 @@
       "price": 100,
       "number": "",
       "remote": false,
-      "image":"../assets/images/kursbilder/",
-      "students": 
-      {"student_names":[], 
-      "student_count": 0}
+      "image": "../assets/images/kursbilder/",
+      "students": {
+        "student_names": [],
+        "student_count": 0
+      }
     }
   ]
 }
