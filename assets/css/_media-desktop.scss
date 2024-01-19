@@ -25,7 +25,7 @@ header{
 //**********************************************//
 
 .button-list{
-  
+
   li{
     width: 10rem;
     padding: 20px;
@@ -57,12 +57,19 @@ header{
           .kurs-body-text-container{
 
             .kurs-text{
+              font-size: 3rem;
+              line-height: 10rem;
+            }
+
+            .kurs-text-best{
               width: 10rem;
               height: 10rem;
               font-size: 5rem;
+              line-height: 10rem;
             }
+          }
         }
-      }
+
         img{
           height: 300px;
         }

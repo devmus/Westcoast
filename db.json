@@ -23,7 +23,7 @@
       "image": "../assets/images/kursbilder/",
       "students": 
       {"student_names":[], 
-      "student_count": 0}
+      "student_count": 5}
     },
     {
       "id": 2,
@@ -38,7 +38,7 @@
       "image":"../assets/images/kursbilder/",
       "students": 
       {"student_names":[], 
-      "student_count": 0}
+      "student_count": 2}
     },
     {
       "id": 3,
@@ -53,7 +53,7 @@
       "image":"../assets/images/kursbilder/",
       "students": 
       {"student_names":[], 
-      "student_count": 0}
+      "student_count": 4}
     },
     {
       "id": 4,
@@ -68,7 +68,7 @@
       "image":"../assets/images/kursbilder/",
       "students": 
       {"student_names":[], 
-      "student_count": 0}
+      "student_count": 6}
     },
     {
       "id": 5,
@@ -83,10 +83,85 @@
       "image":"../assets/images/kursbilder/",
       "students": 
       {"student_names":[], 
-      "student_count": 0}
+      "student_count": 7}
     },
     {
       "id": 6,
+      "title": "Mobile App Development with React Native",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image":"../assets/images/kursbilder/",
+      "students": 
+      {"student_names":[], 
+      "student_count": 12}
+    },
+    {
+      "id": 7,
+      "title": "Mobile App Development with React Native",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image":"../assets/images/kursbilder/",
+      "students": 
+      {"student_names":[], 
+      "student_count": 14}
+    },
+    {
+      "id": 8,
+      "title": "Mobile App Development with React Native",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image":"../assets/images/kursbilder/",
+      "students": 
+      {"student_names":[], 
+      "student_count": 0}
+    },
+    {
+      "id": 9,
+      "title": "Mobile App Development with React Native",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image":"../assets/images/kursbilder/",
+      "students": 
+      {"student_names":[], 
+      "student_count": 15}
+    },
+    {
+      "id": 10,
+      "title": "Mobile App Development with React Native",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image":"../assets/images/kursbilder/",
+      "students": 
+      {"student_names":[], 
+      "student_count": 0}
+    },
+    {
+      "id": 11,
       "title": "Mobile App Development with React Native",
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
       "review": 3.2,

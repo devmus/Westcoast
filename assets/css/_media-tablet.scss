@@ -29,12 +29,28 @@ header{
           .kurs-body-text-container{
 
             .kurs-text{
+              font-size: 2rem;
+              line-height: 10rem;
+            }
+
+            .kurs-text-best{
               width: 10rem;
               height: 10rem;
               font-size: 5rem;
+              line-height: 10rem;
             }
         }
+        .kurs-body-text-pop{
+
+
+          .kurs-text-pop{
+            font-size: 2rem;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+          }
       }
+    }
         img{
           height: 300px;
         }
