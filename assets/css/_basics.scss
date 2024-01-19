@@ -2,10 +2,13 @@ $primary-color: rgb(246, 250, 211);
 $secondary-color: rgb(227, 228, 216);
 $tertiary-color: rgb(188, 255, 252);
 $border-color: rgb(58, 58, 58);
-$transparent-color: rgba(0,0,0,0.5);
+$transparent-color: rgba(0,0,0,0.6);
+$transparent-color-discover: rgba(145, 83, 83, 0.9);
 $warning-color: rgba(255, 133, 133, 0.5);
 $header_m: 62px;
 $header_d: 81px;
+$font-color: white;
+$font-color-discover: rgb(255, 252, 91);
 
 *{
   font-family: Inter;

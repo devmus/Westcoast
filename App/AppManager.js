@@ -7,7 +7,6 @@ export default class AppManager {
       const http = new HttpClient();
       const result = await http.get('kurser');
 
-      console.log('Result', result);
       const kurser = result.map((kurs) => {
         return new Kurs(
           kurs.id,
@@ -16,25 +15,19 @@ export default class AppManager {
           kurs.omdome,
           kurs.kursdagar,
           kurs.kursstart,
+          kurs.kursnummer,
           kurs.distans,
           kurs.bild
         );
       });
 
-      return kurser;
+      kurser.sort((a, b) => parseFloat(b.omdome) - parseFloat(a.omdome));
+
+      let rankadeKurser = kurser.slice(0, 5);
+
+      return rankadeKurser;
     } catch (error) {
       throw error;
     }
   }
 }
-
-console.log('AppManager imported');
-
-// result.sort(
-//   (a, b) => parseFloat(b.review_score) - parseFloat(a.review_score)
-// );
-// let bestCourses = courses.slice(0, 5);
-
-// bestCourses.forEach((obj, index) => {
-//   obj.id = index + 1;
-// });

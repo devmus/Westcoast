@@ -155,10 +155,13 @@ a {
 }
 .header-right .nav-menu li {
   padding: 15px 0;
-  font-size: xx-large;
+  font-size: 1rem;
 }
 .header-right .nav-menu li:hover {
   border: 1px solid black;
+}
+.header-right .nav-menu .aktuell a {
+  color: red;
 }
 .header-right .nav-menu.active {
   visibility: visible;
@@ -188,10 +191,27 @@ a {
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
 }
 .main-content section h2 {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   text-align: center;
   font-size: 1rem;
+}
+.main-content .content-discover h2 {
+  background-color: rgba(145, 83, 83, 0.9);
+  color: rgb(255, 252, 91);
+  text-shadow: 1px 1px 1px black;
+}
+
+.background-img-toppkurser {
+  background-image: url("/assets/images/crowd.webp");
+}
+
+.background-img-omtyckta {
+  background-image: url("/assets/images/celebrate.webp");
+}
+
+.background-img-kursstart {
+  background-image: url("/assets/images/time.webp");
 }
 
 .background-img-allakurser {
@@ -256,22 +276,57 @@ a {
   margin: 2rem;
 }
 .cards-content .cards-container h2 {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   text-align: center;
   font-size: 1rem;
 }
-.cards-content .cards-container .course-card {
+.cards-content .cards-container .course-row {
   border-bottom: 1px solid black;
   padding: 0.2rem;
 }
-.cards-content .cards-container .course-card:last-child {
+.cards-content .cards-container .course-row .course-div {
+  display: flex;
+  justify-content: space-between;
+}
+.cards-content .cards-container .course-row .course-div .course-text-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+}
+.cards-content .cards-container .course-row .course-div .course-text-container .kurstitel {
+  height: 15%;
+}
+.cards-content .cards-container .course-row .course-div .course-text-container .kurs-body-text-container {
+  height: 85%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.cards-content .cards-container .course-row .course-div .course-text-container .kurs-body-text-container .kurs-text {
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  border: 2px dotted gold;
+  border-radius: 1000px;
+  background-color: rgb(255, 255, 189);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards-content .cards-container .course-row .course-div img {
+  width: 25%;
+  height: 100px;
+  object-fit: cover;
+}
+.cards-content .cards-container .course-row:last-child {
   border-bottom: 0;
 }
-.cards-content .course-card:nth-child(even) {
+.cards-content .course-row:nth-child(even) {
   background-color: rgb(246, 250, 211);
 }
-.cards-content .course-card:nth-child(odd) {
+.cards-content .course-row:nth-child(odd) {
   background-color: rgb(227, 228, 216);
 }
 
@@ -341,6 +396,45 @@ textarea {
   justify-content: flex-end;
 }
 
+@media screen and (min-width: 820px) {
+  header {
+    height: 81px;
+  }
+  .logo-container a h1 {
+    font-size: 2rem;
+  }
+  .cards-content .cards-container {
+    width: calc(80% + 3rem);
+    margin: 2rem;
+  }
+  .cards-content .cards-container h2 {
+    font-size: 2rem;
+  }
+  .cards-content .cards-container .course-row .course-div .course-text-container .kurstitel {
+    font-size: 2rem;
+  }
+  .cards-content .cards-container .course-row .course-div .course-text-container .kurs-body-text-container .kurs-text {
+    width: 10rem;
+    height: 10rem;
+    font-size: 5rem;
+  }
+  .cards-content .cards-container .course-row .course-div img {
+    height: 300px;
+  }
+  .main-content {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .main-content section {
+    width: 40vw;
+  }
+  .main-content section h2 {
+    font-size: 2rem;
+  }
+  .header-right .nav-menu {
+    margin-top: 162px;
+  }
+}
 @media screen and (min-width: 1024px) {
   header {
     height: 81px;
@@ -355,17 +449,32 @@ textarea {
   .cards-content .cards-container h2 {
     font-size: 2rem;
   }
+  .cards-content .cards-container .course-row .course-div .course-text-container .kurstitel {
+    font-size: 2rem;
+  }
+  .cards-content .cards-container .course-row .course-div .course-text-container .kurs-body-text-container .kurs-text {
+    width: 10rem;
+    height: 10rem;
+    font-size: 5rem;
+  }
+  .cards-content .cards-container .course-row .course-div img {
+    height: 300px;
+  }
   .main-content {
     flex-direction: row;
     justify-content: center;
   }
   .main-content section {
-    width: 40vw;
+    max-height: 600px;
+    width: 30vw;
   }
   .main-content section h2 {
     font-size: 2rem;
   }
   .header-right .nav-menu {
     margin-top: 162px;
+  }
+  .header-right .nav-menu li {
+    font-size: 2rem;
   }
 }

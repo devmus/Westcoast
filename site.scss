@@ -8,6 +8,10 @@
 @import "assets/css/form";
 
 
+@media screen and (min-width: 820px){
+  @import "assets/css/media-tablet";
+};
+
 @media screen and (min-width: 1024px){
-  @import "assets/css/desktop";
+  @import "assets/css/media-desktop";
 };

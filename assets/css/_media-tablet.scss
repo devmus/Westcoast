@@ -15,6 +15,31 @@ header{
     h2{
       font-size: 2rem;
     }
+
+    .course-row{
+
+      .course-div{
+
+        .course-text-container{
+          
+          .kurstitel{
+            font-size: 2rem;
+          }
+
+          .kurs-body-text-container{
+
+            .kurs-text{
+              width: 10rem;
+              height: 10rem;
+              font-size: 5rem;
+            }
+        }
+      }
+        img{
+          height: 300px;
+        }
+      }
+    }
   }
 }
 

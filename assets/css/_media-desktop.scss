@@ -1,0 +1,69 @@
+header{
+  height: $header_d;
+}
+
+.logo-container a h1{
+      font-size: 2rem;
+}
+
+.cards-content{
+
+  .cards-container{
+    width: calc(80% + 3rem);
+    margin: 2rem;
+
+    h2{
+      font-size: 2rem;
+    }
+
+    .course-row{
+
+      .course-div{
+
+        .course-text-container{
+          
+          .kurstitel{
+            font-size: 2rem;
+          }
+
+          .kurs-body-text-container{
+
+            .kurs-text{
+              width: 10rem;
+              height: 10rem;
+              font-size: 5rem;
+            }
+        }
+      }
+        img{
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+.main-content{
+  flex-direction: row;
+  justify-content: center;
+
+  section{
+    max-height: 600px;
+    width: 30vw;
+
+    h2{
+      font-size: 2rem;
+    }
+  }
+}
+
+.header-right{
+
+  .nav-menu{
+      margin-top: calc($header_d * 2);
+
+      li{
+        font-size: 2rem;
+      }
+  }
+}

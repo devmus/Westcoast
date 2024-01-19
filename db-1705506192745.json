@@ -4,67 +4,67 @@
       "id": 1,
       "kurstitel": "Introduction to Python Programming",
       "beskrivning": "Learn the fundamentals of Python programming language, including syntax, data types, and control structures.",
-      "omdome": 1.1,
+      "omdome": 2.5,
       "kursdagar": "30 dagar",
       "kursstart": "2024-02-20",
       "kursnummer": "",
       "distans": false,
-      "bild": "../assets/images/kursbilder/"
+      "bild": "https://s0.2mdn.net/dfp/2203953/5183990041/1686910942341/92_Sunrise_CoinGecko_970x90/Logo_w.svg"
     },
     {
       "id": 2,
       "kurstitel": "Web Development with JavaScript and HTML5",
       "beskrivning": "Explore the world of web development using JavaScript and HTML5. Build interactive and dynamic web applications.",
-      "omdome": 2.2,
+      "omdome": 2.5,
       "kursdagar": "60 dagar",
       "kursstart": "2024-05-18",
       "kursnummer": "",
       "distans": true,
-      "bild":"../assets/images/kursbilder/"
+      "bild": "../assets/images/admin.webp"
     },
     {
       "id": 3,
       "kurstitel": "Cybersecurity Fundamentals",
       "beskrivning": "Gain a foundational understanding of cybersecurity, covering topics such as encryption, network security, and ethical hacking.",
-      "omdome": 3.4,
+      "omdome": 2.5,
       "kursdagar": "120 dagar",
       "kursstart": "2024-06-18",
       "kursnummer": "",
       "distans": false,
-      "bild":"../assets/images/kursbilder/"
+      "bild": "../assets/images/admin.webp"
     },
     {
       "id": 4,
       "kurstitel": "Data Science with R Programming",
       "beskrivning": "Dive into data science using the R programming language. Analyze and visualize data to make informed decisions.",
-      "omdome": 4.0,
+      "omdome": 2.5,
       "kursdagar": "95 dagar",
       "kursstart": "2024-03-18",
       "kursnummer": "",
       "distans": true,
-      "bild":"../assets/images/kursbilder/"
+      "bild": "../assets/images/admin.webp"
     },
     {
       "id": 5,
       "kurstitel": "Mobile App Development with React Native",
       "beskrivning": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
-      "omdome": 5.0,
+      "omdome": 2.5,
       "kursdagar": "60 dagar",
       "kursstart": "2024-02-18",
       "kursnummer": "",
       "distans": false,
-      "bild":"../assets/images/kursbilder/"
+      "bild": "../assets/images/admin.webp"
     },
     {
       "id": 6,
       "kurstitel": "Mobile App Development with React Native",
       "beskrivning": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
-      "omdome": 3.2,
+      "omdome": 2.5,
       "kursdagar": "60 dagar",
       "kursstart": "2024-02-18",
       "kursnummer": "",
       "distans": false,
-      "bild":"../assets/images/kursbilder/"
+      "bild": "../assets/images/admin.webp"
     }
   ]
 }

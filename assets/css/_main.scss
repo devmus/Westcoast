@@ -25,8 +25,27 @@
       font-size: 1rem;
     }
   }
+
+  .content-discover{
+    
+    h2{
+      background-color: $transparent-color-discover;
+      color: $font-color-discover;
+      text-shadow: 1px 1px 1px black;
+    }
+  }
+
 }
 
+.background-img-toppkurser{
+  background-image: url("/assets/images/crowd.webp");
+}
+.background-img-omtyckta{
+  background-image: url("/assets/images/celebrate.webp");
+}
+.background-img-kursstart{
+  background-image: url("/assets/images/time.webp");
+}
 .background-img-allakurser{
   background-image: url("/assets/images/allakurser.webp");
 }
