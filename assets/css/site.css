@@ -252,6 +252,19 @@ a {
   font-size: large;
 }
 
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -3;
+}
+
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -397,6 +410,35 @@ a {
   background-color: rgb(255, 133, 133);
   cursor: pointer;
   margin-bottom: 1rem;
+}
+
+.mina-sidor {
+  background-color: rgb(227, 228, 216);
+}
+
+.login-button-container, .reg-button-container {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+.login-button-container button, .reg-button-container button {
+  background-color: rgb(188, 255, 252);
+  padding: 5px;
+  border: solid 1px rgb(58, 58, 58);
+  border-radius: 10px;
+  width: auto;
+}
+.login-button-container button:hover, .reg-button-container button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 133, 133);
+}
+.login-button-container input, .reg-button-container input {
+  font-size: 0.9rem;
+  width: auto;
+  padding: 0.63rem;
+  border: solid 1px rgb(58, 58, 58);
+  background-color: rgb(246, 250, 211);
+  margin-left: 5px;
 }
 
 form {

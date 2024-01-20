@@ -36,3 +36,35 @@
   cursor: pointer;
   margin-bottom: 1rem;
 }
+
+.mina-sidor{
+  background-color: $secondary-color;
+}
+
+.login-button-container, .reg-button-container{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+
+  button{
+    background-color: $tertiary-color;
+    padding: 5px;
+    border: solid 1px $border-color;
+    border-radius: 10px;
+    width: auto;
+  }
+
+  button:hover{
+    cursor: pointer;
+    background-color: $warning-color;
+  }
+
+  input{
+    font-size: 0.9rem;
+    width: auto;
+    padding: 0.63rem;
+    border: solid 1px $border-color;
+    background-color: $primary-color;
+    margin-left: 5px;
+  }
+}

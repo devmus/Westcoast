@@ -92,22 +92,6 @@
       ]
     },
     {
-      "id": 6,
-      "title": "Database Design and SQL Fundamentals",
-      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
-      "review": 3.2,
-      "days": "60 dagar",
-      "start": "2024-02-18",
-      "price": 100,
-      "number": "",
-      "remote": false,
-      "image": "../assets/images/kursbilder/6.jpg",
-      "teacher": "Prof. Maria SQLowski",
-      "students": [
-        "Kalle"
-      ]
-    },
-    {
       "id": 7,
       "title": "Cloud Computing Essentials with AWS",
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
@@ -170,34 +154,6 @@
       "students": [
         "Kalle"
       ]
-    },
-    {
-      "title": "",
-      "description": "",
-      "days": "",
-      "start": "",
-      "price": "",
-      "teacher": "",
-      "remote": "",
-      "image": "",
-      "review": 0,
-      "students": "",
-      "number": "",
-      "id": 12
-    },
-    {
-      "title": "",
-      "description": "",
-      "days": "",
-      "start": "",
-      "price": "",
-      "teacher": "",
-      "remote": "",
-      "image": "",
-      "review": 6,
-      "students": "",
-      "number": "",
-      "id": 13
     }
   ]
 }
