@@ -47,44 +47,68 @@
         <h2>Lägg till kurs</h2>
         <form id="addCourseForm">
           <div class="form-control">
-            <label for="course_name">Kursnamn</label>
+            <label for="title">Kursnamn</label>
             <input
               type="text"
-              name="course_name"
-              id="course_name"
+              name="title"
+              id="add-title"
               placeholder="Ange kursnamn" />
           </div>
           <div class="form-control">
             <label for="description">Beskrivning</label>
             <textarea
               name="description"
-              id="description"
+              id="add-description"
               cols="30"
               rows="10"></textarea>
           </div>
           <div class="form-control">
-            <label for="courselength">Kurslängd</label>
+            <label for="days">Kurslängd</label>
             <input
               type="text"
-              name="courselength"
-              id="courselength"
-              placeholder="Antal veckor" />
+              name="days"
+              id="add-days"
+              placeholder="Antal dagar" />
+          </div>
+          <div class="form-control">
+            <label for="start">Kursstart</label>
+            <input
+              type="text"
+              name="start"
+              id="add-start"
+              placeholder="Datum" />
+          </div>
+          <div class="form-control">
+            <label for="price">Pris</label>
+            <input
+              type="number"
+              name="price"
+              id="add-price"
+              placeholder="Kr" />
           </div>
           <div class="form-control">
             <label for="teacher">Lärare</label>
             <input
               type="text"
               name="teacher"
-              id="teacher"
+              id="add-teacher"
               placeholder="Titel. Förnamn Efternamn" />
           </div>
           <div class="form-control">
-            <label for="review_score">Omdöme</label>
+            <label for="remote">Distans</label>
             <input
               type="text"
-              name="review_score"
-              id="review_score"
-              placeholder="1-5" />
+              name="remote"
+              id="add-remote"
+              placeholder="true / false" />
+          </div>
+          <div class="form-control">
+            <label for="image">Bild sökväg</label>
+            <input
+              type="text"
+              name="image"
+              id="image"
+              placeholder="../assets/images/kursbilder/#.jpg"/>
           </div>
           <div class="form-control">
             <button

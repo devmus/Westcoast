@@ -1,0 +1,203 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "firstname": "",
+      "lastname": "",
+      "adress": "",
+      "email": "",
+      "phone": ""
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Web Development with JavaScript and HTML5",
+      "description": "Explore the world of web development using JavaScript and HTML5. Build interactive and dynamic web applications.",
+      "review": 2.2,
+      "days": "60 dagar",
+      "start": "2024-05-18",
+      "price": 100,
+      "number": "",
+      "remote": true,
+      "image": "../assets/images/kursbilder/2.jpg",
+      "teacher": "Prof. Jason Scripter",
+      "students": {
+        "student_names": [
+          "Kalle"
+        ],
+        "student_count": 2
+      }
+    },
+    {
+      "id": 2,
+      "title": "Web Development with JavaScript and HTML5",
+      "description": "Explore the world of web development using JavaScript and HTML5. Build interactive and dynamic web applications.",
+      "review": 2.2,
+      "days": "60 dagar",
+      "start": "2024-05-18",
+      "price": 100,
+      "number": "",
+      "remote": true,
+      "image": "../assets/images/kursbilder/2.jpg",
+      "teacher": "Prof. Jason Scripter",
+      "students": {
+        "student_names": [],
+        "student_count": 2
+      }
+    },
+    {
+      "id": 3,
+      "title": "Cybersecurity Fundamentals",
+      "description": "Gain a foundational understanding of cybersecurity, covering topics such as encryption, network security, and ethical hacking.",
+      "review": 3.4,
+      "days": "120 dagar",
+      "start": "2024-06-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image": "../assets/images/kursbilder/3.jpg",
+      "teacher": "Dr. Emily Firewall",
+      "students": {
+        "student_names": [],
+        "student_count": 4
+      }
+    },
+    {
+      "id": 4,
+      "title": "Data Science with R Programming",
+      "description": "Dive into data science using the R programming language. Analyze and visualize data to make informed decisions.",
+      "review": 4,
+      "days": "95 dagar",
+      "start": "2024-03-18",
+      "price": 100,
+      "number": "",
+      "remote": true,
+      "image": "../assets/images/kursbilder/4.jpg",
+      "teacher": "Prof. Ryan Datason",
+      "students": {
+        "student_names": [],
+        "student_count": 6
+      }
+    },
+    {
+      "id": 5,
+      "title": "Mobile App Development with React Native",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 5,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image": "../assets/images/kursbilder/5.jpg",
+      "teacher": "Dr. Jessica Mobileson",
+      "students": {
+        "student_names": [],
+        "student_count": 7
+      }
+    },
+    {
+      "id": 6,
+      "title": "Database Design and SQL Fundamentals",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image": "../assets/images/kursbilder/6.jpg",
+      "teacher": "Prof. Maria SQLowski",
+      "students": {
+        "student_names": [],
+        "student_count": 12
+      }
+    },
+    {
+      "id": 7,
+      "title": "Cloud Computing Essentials with AWS",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image": "../assets/images/kursbilder/7.jpg",
+      "teacher": "Dr. Alex Cloudman",
+      "students": {
+        "student_names": [],
+        "student_count": 14
+      }
+    },
+    {
+      "id": 8,
+      "title": "Machine Learning Foundations with Python",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image": "../assets/images/kursbilder/8.jpg",
+      "teacher": "Prof. Isaac Learner",
+      "students": {
+        "student_names": [],
+        "student_count": 0
+      }
+    },
+    {
+      "id": 9,
+      "title": "Agile Development and Scrum Methodology",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image": "../assets/images/kursbilder/9.jpg",
+      "teacher": "Dr. Sarah Agileton",
+      "students": {
+        "student_names": [],
+        "student_count": 15
+      }
+    },
+    {
+      "id": 10,
+      "title": "Networking and TCP/IP Fundamentals",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image": "../assets/images/kursbilder/10.jpg",
+      "teacher": "Prof. Kevin Netmaster",
+      "students": {
+        "student_names": [],
+        "student_count": 0
+      }
+    },
+    {
+      "id": 11,
+      "title": "DevOps Practices and Continuous Integration",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "",
+      "remote": false,
+      "image": "../assets/images/kursbilder/11.jpg",
+      "teacher": "Dr. Oliver DevOpsman",
+      "students": {
+        "student_names": [],
+        "student_count": 0
+      }
+    }
+  ]
+}

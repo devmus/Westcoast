@@ -12,20 +12,19 @@
   "courses": [
     {
       "id": 1,
-      "review": 5,
-      "students": [
-        "Kalle",
-        "Lotta"
-      ],
-      "number": "",
       "title": "Mobile App Development with React Native",
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 5,
       "days": "60 dagar",
       "start": "2024-02-18",
       "price": 100,
-      "remote": "false",
+      "number": "",
+      "remote": false,
       "image": "../assets/images/kursbilder/5.jpg",
-      "teacher": "Dr. Jessica Mobileson"
+      "teacher": "Dr. Jessica Mobileson",
+      "students": [
+        "Kalle"
+      ]
     },
     {
       "id": 2,
@@ -45,19 +44,19 @@
     },
     {
       "id": 3,
-      "review": 5,
-      "students": [
-        "Kalle"
-      ],
-      "number": "",
       "title": "Mobile App Development with React Native",
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 5,
       "days": "60 dagar",
       "start": "2024-02-18",
       "price": 100,
-      "remote": "false",
+      "number": "",
+      "remote": false,
       "image": "../assets/images/kursbilder/5.jpg",
-      "teacher": "Dr. Jessica Mobileson"
+      "teacher": "Dr. Jessica Mobileson",
+      "students": [
+        "Kalle"
+      ]
     },
     {
       "id": 4,
@@ -125,19 +124,19 @@
     },
     {
       "id": 8,
-      "review": 3,
-      "students": [
-        "Kalle"
-      ],
-      "number": "",
       "title": "Machine Learning Foundations with Python",
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.2,
       "days": "60 dagar",
       "start": "2024-02-18",
       "price": 100,
-      "remote": "false",
+      "number": "",
+      "remote": false,
       "image": "../assets/images/kursbilder/8.jpg",
-      "teacher": "Prof. Isaac Learner"
+      "teacher": "Prof. Isaac Learner",
+      "students": [
+        "Kalle"
+      ]
     },
     {
       "id": 10,
@@ -170,34 +169,6 @@
       "students": [
         "Kalle"
       ]
-    },
-    {
-      "title": "",
-      "description": "",
-      "days": "",
-      "start": "",
-      "price": "",
-      "teacher": "",
-      "remote": "",
-      "image": "",
-      "review": 0,
-      "students": "",
-      "number": "",
-      "id": 12
-    },
-    {
-      "title": "",
-      "description": "",
-      "days": "",
-      "start": "",
-      "price": "",
-      "teacher": "",
-      "remote": "",
-      "image": "",
-      "review": 6,
-      "students": "",
-      "number": "",
-      "id": 13
     }
   ]
 }

@@ -349,7 +349,6 @@ a {
 }
 .cards-content .cards-container .course-row .course-div img {
   width: 25%;
-  height: 100px;
   object-fit: cover;
 }
 .cards-content .cards-container .course-row:last-child {
@@ -408,6 +407,10 @@ form {
 
 .form-control {
   margin-bottom: 1rem;
+}
+
+.form-control-hidden {
+  display: none;
 }
 
 .form-control label {

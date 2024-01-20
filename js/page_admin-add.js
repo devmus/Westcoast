@@ -2,11 +2,11 @@ import { initDOM } from './dom.js';
 import { HttpClient } from './http.js';
 import { convertFormDataToJson } from './form.js';
 
-const form = document.querySelector('#addCourseForm');
+// const form = document.querySelector('#addCourseForm');
 
-const initPage = () => {
-  initDOM();
-};
+// const initPage = () => {
+//   initDOM();
+// };
 
 const addCourse = async (e) => {
   e.preventDefault();
@@ -24,4 +24,4 @@ const saveCourse = async (course) => {
 };
 
 document.addEventListener('DOMContentLoaded', initPage);
-form.addEventListener('submit', addCourse);
+// form.addEventListener('submit', addCourse);

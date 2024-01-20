@@ -5,7 +5,7 @@ export default class Course {
   #review = '';
   #days = '';
   #start = '';
-  #price;
+  #price = 0;
   #number = '';
   #remote = false;
   #image = '';
@@ -71,9 +71,9 @@ export default class Course {
   get number() {
     const firstNo = () => {
       if (this.#remote === 'true') {
-        return 0;
-      } else {
         return 1;
+      } else {
+        return 2;
       }
     };
 
@@ -84,7 +84,9 @@ export default class Course {
       return month;
     };
 
-    return `${firstNo()}0.9${secondNo()}.${this.#id}`;
+    this.#number = `${firstNo()}0.9${secondNo()}.${this.#id}`;
+
+    return this.#number;
   }
 
   get remote() {

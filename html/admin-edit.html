@@ -46,6 +46,38 @@
       <div class="cards-container background-transparent">
         <h2>Redigera kurs</h2>
         <form id="updateCourseForm">
+          <div class="form-control-hidden">
+            <label for="id">ID</label>
+            <input
+              type="text"
+              name="id"
+              id="id-hidden"
+              placeholder="Id" />
+          </div>
+          <div class="form-control-hidden">
+            <label for="review">Review</label>
+            <input
+              type="text"
+              name="review"
+              id="review-hidden"
+              placeholder="review" />
+          </div>
+          <div class="form-control-hidden">
+            <label for="students">Students</label>
+            <input
+              type="text"
+              name="students"
+              id="students-hidden"
+              placeholder="students" />
+          </div>
+          <div class="form-control-hidden">
+            <label for="number">Number</label>
+            <input
+              type="text"
+              name="number"
+              id="number-hidden"
+              placeholder="number" />
+          </div>
           <div class="form-control">
             <label for="title">Kursnamn</label>
             <input
@@ -81,7 +113,7 @@
           <div class="form-control">
             <label for="price">Pris</label>
             <input
-              type="text"
+              type="number"
               name="price"
               id="price"
               placeholder="Titel. Förnamn Efternamn" />
@@ -121,16 +153,20 @@
         <div class="course-extra-info-container">
           <h3>Extra information</h3>
           <div class="extra-info-div">
-            <label for="teacher">Registrerade Studenter</label>
-            <span class="course-extra-info"></span>
+            <span>Kursnummer</span>
+            <span class="course-extra-info" id="number"></span>
           </div>
           <div class="extra-info-div">
-            <label for="teacher">Antal Studenter</label>
-            <span class="course-extra-info"></span>
+            <span>Registrerade Studenter</span>
+            <span class="course-extra-info" id="student_names"></span>
+          </div>
+          <div class="extra-info-div">
+            <span>Antal Studenter</span>
+            <span class="course-extra-info" id="student_count"></span>
           </div>
             <div class="extra-info-div">
-            <label for="teacher">Kursens omdöme</label>
-            <span class="course-extra-info"></span>
+            <span>Kursens omdöme</span>
+            <span class="course-extra-info" id="review"></span>
           </div>
         </div>
         <div class="btn-container">
