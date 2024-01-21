@@ -69,23 +69,6 @@ export default class Course {
   }
 
   get number() {
-    const firstNo = () => {
-      if (this.#remote === 'true') {
-        return 1;
-      } else {
-        return 2;
-      }
-    };
-
-    const secondNo = () => {
-      const date = new Date(this.#start);
-      const month = date.getMonth();
-
-      return month;
-    };
-
-    this.#number = `${firstNo()}0.9${secondNo()}.${this.#id}`;
-
     return this.#number;
   }
 

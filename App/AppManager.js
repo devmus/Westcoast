@@ -66,7 +66,21 @@ export default class AppManager {
     try {
       const http = new HttpClient();
       const result = await http.get(`courses/${id}`);
-      return result;
+
+      return new Course(
+        result.id,
+        result.title,
+        result.description,
+        result.review,
+        result.days,
+        result.start,
+        result.price,
+        result.number,
+        result.remote,
+        result.image,
+        result.teacher,
+        result.students
+      );
     } catch (error) {
       throw error;
     }
@@ -121,7 +135,6 @@ export default class AppManager {
     const obj = convertFormDataToJson(course);
     obj.review = 0;
     obj.students = '';
-    obj.number = '';
     this.saveCourse(obj);
   };
 
@@ -129,6 +142,30 @@ export default class AppManager {
     const url = 'http://localhost:3000/courses';
     const http = new HttpClient(url);
     await http.add(course);
-    // location.href = './admin.html';
+    location.href = './admin.html';
+  };
+
+  regUser = async (e, form) => {
+    e.preventDefault();
+    const student = new FormData(form);
+    const obj = convertFormDataToJson(student);
+    obj.username =
+      `${obj.firstname}`.toLocaleLowerCase() + Math.floor(Math.random() * 100);
+    localStorage.setItem('username', obj.username);
+    this.saveUser(obj);
+  };
+
+  saveUser = async (student) => {
+    const http = new HttpClient('http://localhost:3000/students');
+    await http.add(student);
+    location.href = `./minasidor.html?user=${student.username}`;
+  };
+
+  loginUser = async (e, form) => {
+    e.preventDefault();
+    const username = new FormData(form);
+    const obj = convertFormDataToJson(username);
+    localStorage.setItem('username', obj.username);
+    location.href = `./minasidor.html?user=${obj.username}`;
   };
 }

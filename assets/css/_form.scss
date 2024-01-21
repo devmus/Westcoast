@@ -31,7 +31,10 @@ textarea, {
   justify-content: flex-end;
 }
 
-.course-extra-info-container{
+//Extra information
+
+.extra-info,
+.reg-container, .login-container{
   padding: 0 2rem;
   margin: 1rem 1rem;
   background-color: $primary-color;
@@ -43,6 +46,9 @@ textarea, {
   }
 }
 
+.reg-container, .login-container{
+  background-color: $secondary-color;
+}
 .extra-info-div{
   margin-bottom: 1rem;
   display: flex;
@@ -62,3 +68,7 @@ textarea, {
   display: flex;
   justify-content: flex-end;
 }
+
+//Mina sidor
+
+

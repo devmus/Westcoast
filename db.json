@@ -8,6 +8,140 @@
       "email": "",
       "phone": "",
       "courses": []
+    },
+    {
+      "id": 2
+    },
+    {
+      "firstname": "Kalle",
+      "id": 3
+    },
+    {
+      "firstname": "Kalle",
+      "id": 4
+    },
+    {
+      "firstname": "Kalle",
+      "id": 5
+    },
+    {
+      "firstname": "asdfff",
+      "lastname": "asdf",
+      "id": 6
+    },
+    {
+      "firstname": "Oskar",
+      "lastname": "Oskarsson",
+      "adress": "Oskarsvägen 31",
+      "email": "oskar.oskarsson@oskar.com",
+      "phone": "0707543271",
+      "id": 7
+    },
+    {
+      "firstname": "Kalle",
+      "lastname": "asdf",
+      "adress": "Oskarsvägen 31",
+      "email": "ramus",
+      "phone": "0707543271",
+      "id": 8
+    },
+    {
+      "firstname": "Kalle",
+      "lastname": "asdf",
+      "adress": "Oskarsvägen 31",
+      "email": "ramus",
+      "phone": "",
+      "id": 9
+    },
+    {
+      "firstname": "Kalle",
+      "lastname": "Oskarsson",
+      "adress": "",
+      "email": "ramus",
+      "phone": "0707543271",
+      "username": "Kalle_Oskarsson",
+      "id": 10
+    },
+    {
+      "firstname": "Balle",
+      "lastname": "Oskarsson",
+      "adress": "oskarvägen",
+      "email": "bajs",
+      "phone": "070",
+      "username": "balle89",
+      "id": 11
+    },
+    {
+      "firstname": "Kalle",
+      "lastname": "Balle",
+      "adress": "asdf",
+      "email": "asdf",
+      "phone": "asdf",
+      "username": "kalle20",
+      "id": 12
+    },
+    {
+      "firstname": "Kalle",
+      "lastname": "Oskarsson",
+      "adress": "Oskarsvägen 31",
+      "email": "ramus",
+      "phone": "070",
+      "username": "kalle96",
+      "id": 13
+    },
+    {
+      "firstname": "asdf",
+      "lastname": "asdf",
+      "adress": "asdf",
+      "email": "asdf",
+      "phone": "asdf",
+      "username": "asdf9",
+      "id": 14
+    },
+    {
+      "firstname": "asdasd",
+      "lastname": "asdf",
+      "adress": "fgjfgj",
+      "email": "ramus",
+      "phone": "0707543271",
+      "username": "asdasd18",
+      "id": 15
+    },
+    {
+      "firstname": "asdf",
+      "lastname": "asdf",
+      "adress": "asdsad",
+      "email": "asdasd",
+      "phone": "asdasd",
+      "username": "asdf41",
+      "id": 16
+    },
+    {
+      "firstname": "Kalle",
+      "lastname": "Oskarsson",
+      "adress": "Oskarsvägen 31",
+      "email": "ramus",
+      "phone": "asdf",
+      "username": "kalle53",
+      "id": 17
+    },
+    {
+      "firstname": "Kalle",
+      "lastname": "Svensson",
+      "adress": "ringvägen 45",
+      "email": "rasmus.wqer",
+      "phone": "45335435",
+      "username": "kalle12",
+      "id": 18
+    },
+    {
+      "firstname": "Kalle",
+      "lastname": "235",
+      "adress": "235325",
+      "email": "235",
+      "phone": "235325",
+      "username": "kalle18",
+      "id": 19
     }
   ],
   "courses": [
@@ -155,6 +289,62 @@
       "students": [
         "Kalle"
       ]
+    },
+    {
+      "title": "",
+      "description": "",
+      "days": "",
+      "start": "",
+      "price": "",
+      "teacher": "",
+      "remote": "",
+      "image": "",
+      "review": 0,
+      "students": "",
+      "number": "",
+      "id": 12
+    },
+    {
+      "title": "Mobile App Development with React Native",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "days": "60 dagar",
+      "start": "2024-02-12",
+      "price": "200",
+      "teacher": "Dr. Jessica Mobileson",
+      "remote": "true",
+      "image": "../assets/images/kursbilder/5.jpg",
+      "review": 0,
+      "students": "",
+      "number": "",
+      "id": 13
+    },
+    {
+      "title": "sadasd",
+      "number": "",
+      "description": "asdasd",
+      "days": "asdasd",
+      "start": "asd",
+      "price": "505",
+      "teacher": "asdsad",
+      "remote": "asdsada",
+      "image": "asdasd",
+      "review": 0,
+      "students": "",
+      "id": 14
+    },
+    {
+      "title": "5343",
+      "number": "453453453",
+      "description": "",
+      "days": "",
+      "start": "",
+      "price": "",
+      "teacher": "",
+      "remote": "",
+      "image": "",
+      "review": 0,
+      "students": "",
+      "id": 15
     }
   ]
 }
