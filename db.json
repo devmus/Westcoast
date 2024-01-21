@@ -6,7 +6,8 @@
       "lastname": "",
       "adress": "",
       "email": "",
-      "phone": ""
+      "phone": "",
+      "courses": []
     }
   ],
   "courses": [
@@ -21,7 +22,7 @@
       "title": "Mobile App Development with React Native",
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
       "days": "60 dagar",
-      "start": "2024-02-18",
+      "start": "2024-02-19",
       "price": 100,
       "remote": "false",
       "image": "../assets/images/kursbilder/5.jpg",
@@ -33,7 +34,7 @@
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
       "review": 5,
       "days": "60 dagar",
-      "start": "2024-02-18",
+      "start": "2024-01-18",
       "price": 100,
       "number": "",
       "remote": false,
@@ -53,7 +54,7 @@
       "title": "Mobile App Development with React Native",
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
       "days": "60 dagar",
-      "start": "2024-02-18",
+      "start": "2024-02-20",
       "price": 100,
       "remote": "false",
       "image": "../assets/images/kursbilder/5.jpg",
@@ -81,7 +82,7 @@
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
       "review": 5,
       "days": "60 dagar",
-      "start": "2024-02-18",
+      "start": "2024-02-16",
       "price": 100,
       "number": "",
       "remote": false,

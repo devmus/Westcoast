@@ -16,6 +16,10 @@
       font-size: 1rem;
     }
 
+    .course-row:hover{
+      box-shadow: 0px 0px 10px 5px $tertiary-color inset;
+    }
+
     .course-row{
       border-bottom: 1px solid black;
       padding: 0.2rem;

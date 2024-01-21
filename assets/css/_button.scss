@@ -3,6 +3,10 @@
   flex-direction: row;
   justify-content: center;
 
+  .mina-btn{
+    cursor: pointer;
+  }
+
   li{
     width: 8rem;
     padding: 15px;
@@ -12,9 +16,13 @@
     background-color: $secondary-color;
     text-align: center;
   }
+
+  a li:hover{
+    background-color: $primary-color;
+  }
 }
 
-.form-control .btn {
+.form-control .btn{
   padding: 0.63rem;
   border: 1px solid $border-color;
   background-color: $tertiary-color;
@@ -41,23 +49,10 @@
   background-color: $secondary-color;
 }
 
-.login-button-container, .reg-button-container{
+.login-container, .reg-container{
   display: flex;
   flex-direction: row;
   padding: 5px;
-
-  button{
-    background-color: $tertiary-color;
-    padding: 5px;
-    border: solid 1px $border-color;
-    border-radius: 10px;
-    width: auto;
-  }
-
-  button:hover{
-    cursor: pointer;
-    background-color: $warning-color;
-  }
 
   input{
     font-size: 0.9rem;

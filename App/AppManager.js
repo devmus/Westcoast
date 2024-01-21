@@ -1,6 +1,7 @@
 import Course from '../Models/Course.js';
 import { HttpClient } from '../lib/https.js';
 import { convertFormDataToJson } from '../lib/form.js';
+import { daysDate } from '../lib/days.js';
 
 export default class AppManager {
   async listCourses() {
@@ -45,6 +46,19 @@ export default class AppManager {
       (a, b) => parseFloat(b.students.length) - parseFloat(a.students.length)
     );
     let limitCourses = courses.slice(0, 5);
+    return limitCourses;
+  }
+
+  async startCourses() {
+    let courses = await this.listCourses();
+    courses.forEach((course) => {
+      daysDate(course);
+    });
+    courses.sort((a, b) => a.daysDifference - b.daysDifference);
+    const filteredCourses = courses.filter(
+      (course) => course.daysDifference > 0
+    );
+    const limitCourses = filteredCourses.slice(0, 5);
     return limitCourses;
   }
 

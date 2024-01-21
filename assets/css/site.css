@@ -205,6 +205,9 @@ a {
   color: rgb(255, 252, 91);
   text-shadow: 1px 1px 1px black;
 }
+.main-content section:hover {
+  box-shadow: 0px 0px 10px black;
+}
 
 .background-img-toppkurser {
   background-image: url("/assets/images/crowd.webp");
@@ -265,6 +268,10 @@ a {
   z-index: -3;
 }
 
+.course-details {
+  background-color: rgb(246, 250, 211);
+}
+
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -297,6 +304,9 @@ a {
   color: white;
   text-align: center;
   font-size: 1rem;
+}
+.cards-content .cards-container .course-row:hover {
+  box-shadow: 0px 0px 10px 5px rgb(188, 255, 252) inset;
 }
 .cards-content .cards-container .course-row {
   border-bottom: 1px solid black;
@@ -379,6 +389,9 @@ a {
   flex-direction: row;
   justify-content: center;
 }
+.button-list .mina-btn {
+  cursor: pointer;
+}
 .button-list li {
   width: 8rem;
   padding: 15px;
@@ -387,6 +400,9 @@ a {
   border-radius: 50px;
   background-color: rgb(227, 228, 216);
   text-align: center;
+}
+.button-list a li:hover {
+  background-color: rgb(246, 250, 211);
 }
 
 .form-control .btn {
@@ -416,23 +432,12 @@ a {
   background-color: rgb(227, 228, 216);
 }
 
-.login-button-container, .reg-button-container {
+.login-container, .reg-container {
   display: flex;
   flex-direction: row;
   padding: 5px;
 }
-.login-button-container button, .reg-button-container button {
-  background-color: rgb(188, 255, 252);
-  padding: 5px;
-  border: solid 1px rgb(58, 58, 58);
-  border-radius: 10px;
-  width: auto;
-}
-.login-button-container button:hover, .reg-button-container button:hover {
-  cursor: pointer;
-  background-color: rgb(255, 133, 133);
-}
-.login-button-container input, .reg-button-container input {
+.login-container input, .reg-container input {
   font-size: 0.9rem;
   width: auto;
   padding: 0.63rem;
