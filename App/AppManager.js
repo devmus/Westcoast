@@ -63,6 +63,8 @@ export default class AppManager {
   }
 
   async courseDetails(id) {
+    console.log(2);
+
     try {
       const http = new HttpClient();
       const result = await http.get(`courses/${id}`);
@@ -167,5 +169,59 @@ export default class AppManager {
     const obj = convertFormDataToJson(username);
     localStorage.setItem('username', obj.username);
     location.href = `./minasidor.html?user=${obj.username}`;
+  };
+
+  enroll = async (e) => {
+    e.preventDefault();
+    const form = document.querySelector('#listCourseForm');
+    const courseFormData = new FormData(form);
+    const courseId = courseFormData.get('title');
+
+    const existingCourse = await this.getCourseDataFromServer(courseId);
+
+    if (existingCourse) {
+      existingCourse.students = existingCourse.students || [];
+
+      const username = localStorage.getItem('username');
+      existingCourse.students.push(username);
+
+      await this.updateCourseDataOnServer(existingCourse);
+    } else {
+      console.error(`Course with id ${courseId} not found`);
+    }
+    location.href = `./minasidor.html`;
+  };
+
+  async getCourseDataFromServer(courseId) {
+    const url = `http://localhost:3000/courses/${courseId}`;
+    const http = new HttpClient(url);
+
+    try {
+      const response = await http.get(`courses/${courseId}`);
+      return response;
+    } catch (error) {
+      console.error(`Error fetching course data: ${error}`);
+      return null;
+    }
+  }
+
+  async updateCourseDataOnServer(course) {
+    const url = `http://localhost:3000/courses/${course.id}`;
+    const http = new HttpClient(url);
+
+    try {
+      await http.update(course);
+    } catch (error) {
+      console.error(`Error updating course data: ${error}`);
+    }
+  }
+
+  myCourses = async () => {
+    const user = localStorage.getItem('username');
+    const allCourses = await this.listCourses();
+    const enrolledCourses = allCourses.filter((course) =>
+      course.students.includes(user)
+    );
+    return enrolledCourses;
   };
 }

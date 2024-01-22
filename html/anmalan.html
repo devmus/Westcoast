@@ -37,18 +37,53 @@
     </div>
   </header>
   <main>
-    <article class="main-content">
+    <div class="admin-links">
+      <ul class="button-list">
+        <a href="./allakurser.html"><li>Alla kurser</li></a>
+        <a href="./minasidor.html"><li>Mina sidor</li></a>
+      </ul>
+    </div>
+    <article class="cards-content">
+      <div class="cards-container">
+        <h2>Kursanmälan</h2>
+        <form id="listCourseForm">
+          <div class="form-control">
+            <label for="title">Kursnamn</label>
+            <select
+              name="title"
+              id="list-title">
+            </select>
+          </div>
+            <!-- <div class="form-control">
+              <label for="teacher">Lärare</label>
+              <input
+                type="text"
+                name="teacher"
+                id="teacher"
+                placeholder=""/>
+            </div> -->
+            <div class="form-control">
+              <button
+                type="submit"
+                class="btn">
+                Spara
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </article>
-
 
     <!--läs in alla kurser-->
     <!--tvinga inloggning-->
     <!--läs in student med användarnamn med samma som i localstorage-->
+    <!--färdigifyllt formulär för anmälan till kursen med [a b c d] enligt krav-->
+
     <!--skapa dropdown med lista på alla kurser-->
     <!--knapp (aktiv/deaktiv) för reg på distans / klassrum  beroende på true/false-->
     <!--dropdown med lista på alla kurser-->
 
-    
+
   </main>
   <footer>
     <div class="footer-container"></div>
