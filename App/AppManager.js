@@ -1,4 +1,3 @@
-import Course from '../Models/Course.js';
 import { HttpClient } from '../lib/https.js';
 import { convertFormDataToJson } from '../lib/form.js';
 export default class AppManager {
@@ -18,23 +17,6 @@ export default class AppManager {
     }
   }
 
-  extrainfo(course) {
-    return new Course(
-      course.id,
-      course.title,
-      course.description,
-      course.review,
-      course.days,
-      course.start,
-      course.price,
-      course.number,
-      course.remote,
-      course.image,
-      course.teacher,
-      course.students
-    );
-  }
-
   updateCourse = async (e) => {
     e.preventDefault();
     let courseId = 0;
@@ -47,7 +29,6 @@ export default class AppManager {
     obj.students = obj.students.split(',');
     obj.price = parseInt(obj.price);
     obj.review = parseInt(obj.review);
-
     await http.update(obj);
     location.href = './admin.html';
   };
@@ -101,54 +82,9 @@ export default class AppManager {
     location.href = `./minasidor.html?user=${obj.username}`;
   };
 
-  enroll = async (e) => {
-    e.preventDefault();
-    const form = document.querySelector('#listCourseForm');
-    const courseFormData = new FormData(form);
-    const courseId = courseFormData.get('title');
-
-    const existingCourse = await this.getCourseDataFromServer(courseId);
-
-    if (existingCourse) {
-      existingCourse.students = existingCourse.students || [];
-
-      const username = localStorage.getItem('username');
-      existingCourse.students.push(username);
-
-      await this.updateCourseDataOnServer(existingCourse);
-    } else {
-      console.error(`Course with id ${courseId} not found`);
-    }
-    location.href = `./minasidor.html`;
-  };
-
-  async getCourseDataFromServer(courseId) {
-    const url = `http://localhost:3000/courses/${courseId}`;
-    const http = new HttpClient(url);
-
-    try {
-      const response = await http.get(`courses/${courseId}`);
-      return response;
-    } catch (error) {
-      console.error(`Error fetching course data: ${error}`);
-      return null;
-    }
-  }
-
-  async updateCourseDataOnServer(course) {
-    const url = `http://localhost:3000/courses/${course.id}`;
-    const http = new HttpClient(url);
-
-    try {
-      await http.update(course);
-    } catch (error) {
-      console.error(`Error updating course data: ${error}`);
-    }
-  }
-
   myCourses = async () => {
     const user = localStorage.getItem('username');
-    const allCourses = await this.listCourses();
+    const allCourses = await this.getAllCourses();
     const enrolledCourses = allCourses.filter((course) =>
       course.students.includes(user)
     );
@@ -156,10 +92,9 @@ export default class AppManager {
   };
 
   async listStudents() {
+    const http = new HttpClient();
     try {
-      const http = new HttpClient();
-      const result = await http.get('students');
-      return result;
+      return await http.get('students');
     } catch (error) {
       throw error;
     }
@@ -170,5 +105,33 @@ export default class AppManager {
       (student) => student.username === localStorage.getItem('username')
     );
     return filter;
+  }
+
+  enroll = async (e) => {
+    e.preventDefault();
+    const form = document.querySelector('#listCourseForm');
+    const courseFormData = new FormData(form);
+    const courseId = courseFormData.get('title');
+    console.log(courseId);
+
+    const existingCourse = await this.courseDetails(courseId);
+
+    const username = localStorage.getItem('username');
+    existingCourse.students.push(username);
+
+    await this.updateEnrolledStudent(existingCourse);
+
+    location.href = `./minasidor.html`;
+  };
+
+  async updateEnrolledStudent(course) {
+    const url = `http://localhost:3000/courses/${course.id}`;
+    const http = new HttpClient(url);
+
+    try {
+      await http.update(course);
+    } catch (error) {
+      throw error;
+    }
   }
 }

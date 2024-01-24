@@ -22,25 +22,24 @@
   "courses": [
     {
       "id": 1,
-      "review": 3,
+      "title": "Mobile App Development with React Native",
+      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
+      "review": 3.5,
+      "days": "60 dagar",
+      "start": "2024-02-18",
+      "price": 100,
+      "number": "XY233Mobile",
+      "remote": false,
+      "image": "../assets/images/kursbilder/5.jpg",
+      "teacher": "Dr. Jessica Mobileson",
       "students": [
         "Oskar",
         "Emma",
         "Olof",
         "Mikael",
         "Lotta",
-        "oskar3",
-        "rasmus58"
-      ],
-      "number": "XY233Mobile",
-      "title": "Mobile App Development with React Native",
-      "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
-      "days": "60 dagar",
-      "start": "2024-02-18",
-      "price": 110,
-      "remote": "false",
-      "image": "../assets/images/kursbilder/5.jpg",
-      "teacher": "Dr. Jessica Mobileson"
+        "oskar3"
+      ]
     },
     {
       "id": 2,
@@ -244,9 +243,7 @@
         "Oliver",
         "Isabella",
         "Lucas",
-        "Chloe",
-        "rasmus58",
-        "rasmus58"
+        "Chloe"
       ]
     },
     {
@@ -379,8 +376,7 @@
         "Ivy",
         "Jack",
         "Katie",
-        "Leo",
-        "rasmus58"
+        "Leo"
       ]
     },
     {
@@ -399,65 +395,8 @@
         "David",
         "Eva",
         "Frank",
-        "Grace",
-        "rasmus58"
+        "Grace"
       ]
-    },
-    {
-      "title": "",
-      "number": "",
-      "description": "",
-      "days": "",
-      "start": "",
-      "price": "",
-      "teacher": "",
-      "remote": "",
-      "image": "",
-      "review": 0,
-      "students": "",
-      "id": 21
-    },
-    {
-      "title": "",
-      "number": "",
-      "description": "",
-      "days": "",
-      "start": "",
-      "price": "",
-      "teacher": "",
-      "remote": "",
-      "image": "",
-      "review": 0,
-      "students": "",
-      "id": 22
-    },
-    {
-      "title": "",
-      "number": "",
-      "description": "",
-      "days": "",
-      "start": "",
-      "price": "",
-      "teacher": "",
-      "remote": "",
-      "image": "../assets/images/kursbilder/4.jpg",
-      "review": 0,
-      "students": "",
-      "id": 23
-    },
-    {
-      "title": "Test",
-      "number": "test",
-      "description": "test",
-      "days": "test",
-      "start": "test",
-      "price": "100",
-      "teacher": "test",
-      "remote": "test",
-      "image": "test",
-      "review": 0,
-      "students": "",
-      "id": 24
     }
   ]
 }
