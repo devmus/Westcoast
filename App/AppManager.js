@@ -1,88 +1,18 @@
 import Course from '../Models/Course.js';
 import { HttpClient } from '../lib/https.js';
 import { convertFormDataToJson } from '../lib/form.js';
-import { daysDate } from '../lib/days.js';
-
 export default class AppManager {
-  async listCourses() {
+  async getAllCourses() {
     try {
-      const http = new HttpClient();
-      const result = await http.get('courses');
-      // console.log(result);
-
-      const course = result.map((course) => {
-        return new Course(
-          course.id,
-          course.title,
-          course.description,
-          course.review,
-          course.days,
-          course.start,
-          course.price,
-          course.number,
-          course.remote,
-          course.image,
-          course.teacher,
-          course.students
-        );
-      });
-
-      return course;
+      return await new HttpClient().get(`courses/`);
     } catch (error) {
       throw error;
     }
   }
 
-  async rankCourses() {
-    const courses = await this.listCourses();
-    courses.sort((a, b) => parseFloat(b.review) - parseFloat(a.review));
-    let limitCourses = courses.slice(0, 5);
-    return limitCourses;
-  }
-
-  async popCourses() {
-    const courses = await this.listCourses();
-    courses.sort(
-      (a, b) => parseFloat(b.students.length) - parseFloat(a.students.length)
-    );
-    let limitCourses = courses.slice(0, 5);
-    return limitCourses;
-  }
-
-  async startCourses() {
-    let courses = await this.listCourses();
-    courses.forEach((course) => {
-      daysDate(course);
-    });
-    courses.sort((a, b) => a.daysDifference - b.daysDifference);
-    const filteredCourses = courses.filter(
-      (course) => course.daysDifference > 0
-    );
-    const limitCourses = filteredCourses.slice(0, 5);
-    return limitCourses;
-  }
-
   async courseDetails(id) {
-    console.log(2);
-
     try {
-      const http = new HttpClient();
-      const result = await http.get(`courses/${id}`);
-
-      return new Course(
-        result.id,
-        result.title,
-        result.description,
-        result.review,
-        result.days,
-        result.start,
-        result.price,
-        result.number,
-        result.remote,
-        result.image,
-        result.teacher,
-        result.students
-      );
+      return await new HttpClient().get(`courses/${id}`);
     } catch (error) {
       throw error;
     }
@@ -224,4 +154,21 @@ export default class AppManager {
     );
     return enrolledCourses;
   };
+
+  async listStudents() {
+    try {
+      const http = new HttpClient();
+      const result = await http.get('students');
+      return result;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async filterStudents(students) {
+    const filter = students.filter(
+      (student) => student.username === localStorage.getItem('username')
+    );
+    return filter;
+  }
 }

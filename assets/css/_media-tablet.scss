@@ -1,10 +1,29 @@
+//******************* Basics *******************//
+
 header{
-  height: $header_d;
+  height: $header_t;
 }
 
-.logo-container a h1{
-      font-size: 2rem;
+//******************* Header *******************//
+
+.logo-container h1,
+.user{
+      font-size: 1.5rem;
 }
+
+
+.header-right{
+
+  .nav-menu{
+      margin-top: calc($header_d * 2);
+
+      li{
+        font-size: 1.5rem;
+      }
+  }
+}
+
+//******************** Main ********************//
 
 .cards-content{
 
@@ -69,12 +88,5 @@ header{
     h2{
       font-size: 2rem;
     }
-  }
-}
-
-.header-right{
-
-  .nav-menu{
-      margin-top: calc($header_d * 2);
   }
 }

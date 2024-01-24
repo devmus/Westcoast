@@ -3,36 +3,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-height: 100%;
-
-  .user{
-    width: 8rem;
-    padding: 15px;
-    margin: 0 8px;
-    border: 1px solid $border-color;
-    border-radius: 50px;
-    background-color: $tertiary-color;
-    text-align: center;
-  }
 }
 
 .logo-container{
-  display: inline-block;
-  margin: 10px;
+  @include ovalshape;
+  background-color: $tertiary-color;
 
-  a{
-    height: 100%;
-    width: 100%;
+  h1{
+    font-size: 1rem;
+  }
+}
 
-    h1{
-      font-size: 1rem;
-      padding: 10px;
-      border: 1px solid $border-color;
-      border-radius: 50px;
-      background-color: $secondary-color;
-      text-align: center;
-      text-wrap:nowrap;
-    }
+.user{
+  @include ovalshape;
+  background-color: $secondary-color;
+
+  &:hover{
+    background-color: $tertiary-color;
   }
 }
 
@@ -105,15 +92,25 @@
       }
 
       li{
-        padding: 15px 0;
+        margin: 3px;
+        padding: 15px 15px;
         font-size: 1rem;
+        border: 1px solid transparent;
       }
 
-      li:hover{
+      .normal:hover,{
         border: 1px solid black;
+        border-radius: 50px;
+        background-color: $primary-color;
       }
 
-      .aktuell a{
+      .aktuell:hover,{
+        border: 1px solid red;
+        border-radius: 50px;
+        background-color: $primary-color;
+      }
+
+      .aktuell{
         color: red;
       }
   }

@@ -17,29 +17,35 @@
 <body>
   <header>
     <div class="header-container">
-      <div class="logo-container">
-        <a href="../index.html"><h1>Westcoast Eduction</h1></a>
-      </div>
-      <div class="user" style="display: none"></div>
-    <div class="header-right">
-      <nav class="navbar">
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+      <a href="../index.html">
+        <div class="logo-container">
+          <h1>Westcoast Eduction</h1>
         </div>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <h2>Meny</h2>
-          </li>
-        </ul>
-      </nav>
+      </a>
+      <a href="../html/minasidor.html">
+        <div class="user" style="display: none"></div>
+      </a>
+      <div class="header-right">
+        <nav class="navbar">
+          <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-item">
+                <h2>Meny</h2>
+                <!--Meny här-->
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
   <main>
     <div class="admin-links">
       <ul class="button-list">
-        <a href="./allakurser.html"><li>Alla kurser</li></a>
+        <a href="./allcourses.html"><li>Alla kurser</li></a>
         <a href="./minasidor.html"><li>Mina sidor</li></a>
       </ul>
     </div>
@@ -54,23 +60,33 @@
               id="list-title">
             </select>
           </div>
-            <!-- <div class="form-control">
-              <label for="teacher">Lärare</label>
-              <input
-                type="text"
-                name="teacher"
-                id="teacher"
-                placeholder=""/>
-            </div> -->
-            <div class="form-control">
-              <button
-                type="submit"
-                class="btn">
-                Spara
-              </button>
-            </div>
+          <div class="form-control">
+            <button
+              type="submit"
+              class="btn">
+              Spara
+            </button>
           </div>
         </form>
+        <div class="extra-info">
+          <h3>Kontrollera att din information stämmer!</h3>
+          <div class="extra-info-div">
+            <span>Kundnamn</span>
+            <span class="course-extra-info" id="fullname"></span>
+          </div>
+          <div class="extra-info-div">
+            <span>Faktureringsadress</span>
+            <span class="course-extra-info" id="address"></span>
+          </div>
+          <div class="extra-info-div">
+            <span>E-postadress</span>
+            <span class="course-extra-info" id="email"></span>
+          </div>
+            <div class="extra-info-div">
+            <span>Mobilnummer</span>
+            <span class="course-extra-info" id="mobil"></span>
+          </div>
+        </div>
       </div>
     </article>
 

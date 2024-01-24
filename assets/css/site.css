@@ -39,6 +39,10 @@ textarea {
   font-family: Inter;
 }
 
+header {
+  height: 62px;
+}
+
 body {
   min-height: 100vh;
   background-image: url("/assets/images/background.webp");
@@ -47,10 +51,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-}
-
-header {
-  height: 62px;
 }
 
 main {
@@ -75,34 +75,30 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-height: 100%;
-}
-.header-container .user {
-  width: 8rem;
-  padding: 15px;
-  margin: 0 8px;
-  border: 1px solid rgb(58, 58, 58);
-  border-radius: 50px;
-  background-color: rgb(188, 255, 252);
-  text-align: center;
 }
 
 .logo-container {
-  display: inline-block;
+  padding: 15px;
   margin: 10px;
-}
-.logo-container a {
-  height: 100%;
-  width: 100%;
-}
-.logo-container a h1 {
-  font-size: 1rem;
-  padding: 10px;
   border: 1px solid rgb(58, 58, 58);
   border-radius: 50px;
-  background-color: rgb(227, 228, 216);
   text-align: center;
-  text-wrap: nowrap;
+  background-color: rgb(188, 255, 252);
+}
+.logo-container h1 {
+  font-size: 1rem;
+}
+
+.user {
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid rgb(58, 58, 58);
+  border-radius: 50px;
+  text-align: center;
+  background-color: rgb(227, 228, 216);
+}
+.user:hover {
+  background-color: rgb(188, 255, 252);
 }
 
 .menu-container {
@@ -167,13 +163,22 @@ a {
   font-style: oblique;
 }
 .header-right .nav-menu li {
-  padding: 15px 0;
+  margin: 3px;
+  padding: 15px 15px;
   font-size: 1rem;
+  border: 1px solid transparent;
 }
-.header-right .nav-menu li:hover {
+.header-right .nav-menu .normal:hover {
   border: 1px solid black;
+  border-radius: 50px;
+  background-color: rgb(246, 250, 211);
 }
-.header-right .nav-menu .aktuell a {
+.header-right .nav-menu .aktuell:hover {
+  border: 1px solid red;
+  border-radius: 50px;
+  background-color: rgb(246, 250, 211);
+}
+.header-right .nav-menu .aktuell {
   color: red;
 }
 .header-right .nav-menu.active {
@@ -513,10 +518,17 @@ textarea, select {
 
 @media screen and (min-width: 820px) {
   header {
-    height: 81px;
+    height: 72px;
   }
-  .logo-container a h1 {
-    font-size: 2rem;
+  .logo-container h1,
+  .user {
+    font-size: 1.5rem;
+  }
+  .header-right .nav-menu {
+    margin-top: 162px;
+  }
+  .header-right .nav-menu li {
+    font-size: 1.5rem;
   }
   .cards-content .cards-container {
     width: calc(80% + 3rem);
@@ -557,15 +569,13 @@ textarea, select {
   .main-content section h2 {
     font-size: 2rem;
   }
-  .header-right .nav-menu {
-    margin-top: 162px;
-  }
 }
 @media screen and (min-width: 1024px) {
   header {
     height: 81px;
   }
-  .logo-container a h1 {
+  .logo-container h1,
+  .user {
     font-size: 2rem;
   }
   .header-right .nav-menu {
