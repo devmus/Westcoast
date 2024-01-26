@@ -1,45 +1,103 @@
 {
   "students": [
     {
-      "firstname": "Oskar",
-      "lastname": "Andersson",
-      "adress": "Mamamam",
-      "email": "rasrar",
-      "phone": "325235325",
-      "username": "oskar3",
-      "id": 20
+      "firstname": "Anna",
+      "lastname": "Larsson",
+      "adress": "Högbergsgatan 15",
+      "email": "anna2@mail.com",
+      "phone": "0712345678",
+      "username": "anna85",
+      "id": 1
     },
     {
-      "firstname": "Rasmus",
-      "lastname": "Wersäll",
-      "adress": "Testvägen",
-      "email": "testmailen",
-      "phone": "0808088",
-      "username": "rasmus58",
-      "id": 21
+      "firstname": "Erik",
+      "lastname": "Johansson",
+      "adress": "Sveavägen 45",
+      "email": "erik3@mail.com",
+      "phone": "0723456789",
+      "username": "erik76",
+      "id": 2
+    },
+    {
+      "firstname": "Sofia",
+      "lastname": "Nilsson",
+      "adress": "Drottninggatan 20",
+      "email": "sofia4@mail.com",
+      "phone": "0734567890",
+      "username": "sofia17",
+      "id": 3
+    },
+    {
+      "firstname": "David",
+      "lastname": "Persson",
+      "adress": "Kungsgatan 10",
+      "email": "david5@mail.com",
+      "phone": "0745678901",
+      "username": "david61",
+      "id": 4
+    },
+    {
+      "firstname": "Maja",
+      "lastname": "Berg",
+      "adress": "Vasagatan 18",
+      "email": "maja6@mail.com",
+      "phone": "0756789012",
+      "username": "maja27",
+      "id": 5
+    },
+    {
+      "firstname": "Hugo",
+      "lastname": "Ekström",
+      "adress": "Östermalmstorg 5",
+      "email": "hugo7@mail.com",
+      "phone": "0767890123",
+      "username": "hugo90",
+      "id": 6
+    },
+    {
+      "firstname": "Emelie",
+      "lastname": "Gustafsson",
+      "adress": "Klarabergsgatan 22",
+      "email": "emelie8@mail.com",
+      "phone": "0778901234",
+      "username": "emelie67",
+      "id": 7
+    },
+    {
+      "firstname": "Niklas",
+      "lastname": "Svensson",
+      "adress": "Norrtullsgatan 15",
+      "email": "niklas9@mail.com",
+      "phone": "0789012345",
+      "username": "niklas12",
+      "id": 8
+    },
+    {
+      "firstname": "Isabella",
+      "lastname": "Holm",
+      "adress": "Södermannagatan 8",
+      "email": "isabella10@mail.com",
+      "phone": "0790123456",
+      "username": "isabella94",
+      "id": 9
     }
   ],
   "courses": [
     {
       "id": 1,
+      "review": 3,
+      "students": [
+        "david61"
+      ],
+      "number": "XY233Mobile",
       "title": "Mobile App Development with React Native",
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
-      "review": 3.5,
       "days": "60 dagar",
       "start": "2024-02-18",
-      "price": 100,
-      "number": "XY233Mobile",
-      "remote": false,
+      "price": 110,
+      "remote": "false",
       "image": "../assets/images/kursbilder/5.jpg",
-      "teacher": "Dr. Jessica Mobileson",
-      "students": [
-        "Oskar",
-        "Emma",
-        "Olof",
-        "Mikael",
-        "Lotta",
-        "oskar3"
-      ]
+      "teacher": "Dr. Jessica Mobileson"
     },
     {
       "id": 2,
@@ -53,11 +111,7 @@
       "remote": false,
       "image": "../assets/images/kursbilder/2.jpg",
       "teacher": "Prof. Amanda Coder",
-      "students": [
-        "Alice",
-        "Bob",
-        "Charlie"
-      ]
+      "students": []
     },
     {
       "id": 3,
@@ -72,10 +126,8 @@
       "image": "../assets/images/kursbilder/3.jpg",
       "teacher": "Dr. Alex Data",
       "students": [
-        "Wyatt",
-        "Hazel",
-        "Caleb",
-        "Violet"
+        "erik76",
+        "maja27"
       ]
     },
     {
@@ -90,11 +142,7 @@
       "remote": false,
       "image": "../assets/images/kursbilder/4.jpg",
       "teacher": "Prof. Sarah Secure",
-      "students": [
-        "Oscar",
-        "Nora",
-        "Milo"
-      ]
+      "students": []
     },
     {
       "id": 5,
@@ -109,10 +157,8 @@
       "image": "../assets/images/kursbilder/5.jpg",
       "teacher": "Dr. Chris Cloud",
       "students": [
-        "Zoe",
-        "Liam",
-        "Ava",
-        "Ethan"
+        "anna85",
+        "isabella94"
       ]
     },
     {
@@ -128,9 +174,7 @@
       "image": "../assets/images/kursbilder/6.jpg",
       "teacher": "Prof. Frank Flutter",
       "students": [
-        "Logan",
-        "Aria",
-        "Ezra"
+        "sofia17"
       ]
     },
     {
@@ -146,10 +190,9 @@
       "image": "../assets/images/kursbilder/7.jpg",
       "teacher": "Dr. Denise DevOps",
       "students": [
-        "Luna",
-        "Max",
-        "Stella",
-        "Leo"
+        "erik76",
+        "maja27",
+        "niklas12"
       ]
     },
     {
@@ -165,9 +208,8 @@
       "image": "../assets/images/kursbilder/8.jpg",
       "teacher": "Prof. Alan AI",
       "students": [
-        "Avery",
-        "Henry",
-        "Sophia"
+        "hugo90",
+        "emelie67"
       ]
     },
     {
@@ -183,9 +225,8 @@
       "image": "../assets/images/kursbilder/9.jpg",
       "teacher": "Dr. Brenda Blockchain",
       "students": [
-        "Carter",
-        "Grace",
-        "Jackson"
+        "david61",
+        "isabella94"
       ]
     },
     {
@@ -200,12 +241,7 @@
       "remote": true,
       "image": "../assets/images/kursbilder/21.jpg",
       "teacher": "Dr. Amelia ML",
-      "students": [
-        "Harper",
-        "Landon",
-        "Ella",
-        "Owen"
-      ]
+      "students": []
     },
     {
       "id": 11,
@@ -220,11 +256,8 @@
       "image": "../assets/images/kursbilder/11.jpg",
       "teacher": "Prof. Jason Scripter",
       "students": [
-        "Mason",
-        "Amelia",
-        "Ethan",
-        "oskar3",
-        "rasmus58"
+        "sofia17",
+        "emelie67"
       ]
     },
     {
@@ -240,10 +273,7 @@
       "image": "../assets/images/kursbilder/12.jpg",
       "teacher": "Dr. Sparky Data",
       "students": [
-        "Oliver",
-        "Isabella",
-        "Lucas",
-        "Chloe"
+        "hugo90"
       ]
     },
     {
@@ -259,10 +289,7 @@
       "image": "../assets/images/kursbilder/13.jpg",
       "teacher": "Prof. Rachel Reactor",
       "students": [
-        "Noah",
-        "Ava",
-        "Elijah",
-        "Mia"
+        "niklas12"
       ]
     },
     {
@@ -278,10 +305,8 @@
       "image": "../assets/images/kursbilder/14.jpg",
       "teacher": "Dr. Py Data",
       "students": [
-        "Sophie",
-        "Liam",
-        "Emma",
-        "Kalle"
+        "maja27",
+        "isabella94"
       ]
     },
     {
@@ -297,9 +322,7 @@
       "image": "../assets/images/kursbilder/15.jpg",
       "teacher": "Prof. Angie Angular",
       "students": [
-        "Xander",
-        "Yvonne",
-        "Zane"
+        "erik76"
       ]
     },
     {
@@ -315,9 +338,8 @@
       "image": "../assets/images/kursbilder/16.jpg",
       "teacher": "Dr. Java Guru",
       "students": [
-        "Ursula",
-        "Victor",
-        "Wendy"
+        "anna85",
+        "niklas12"
       ]
     },
     {
@@ -333,12 +355,7 @@
       "image": "../assets/images/kursbilder/17.jpg",
       "teacher": "Prof. Sandy Secure",
       "students": [
-        "Patrick",
-        "Quinn",
-        "Rachel",
-        "Samuel",
-        "Tracy",
-        "rasmus58"
+        "david61"
       ]
     },
     {
@@ -354,9 +371,7 @@
       "image": "../assets/images/kursbilder/18.jpg",
       "teacher": "Dr. Full Stack",
       "students": [
-        "Mia",
-        "Nathan",
-        "Olivia"
+        "sofia17"
       ]
     },
     {
@@ -372,11 +387,7 @@
       "image": "../assets/images/kursbilder/22.jpg",
       "teacher": "Prof. Barry Blockchain",
       "students": [
-        "Henry",
-        "Ivy",
-        "Jack",
-        "Katie",
-        "Leo"
+        "hugo90"
       ]
     },
     {
@@ -392,10 +403,8 @@
       "image": "../assets/images/kursbilder/20.jpg",
       "teacher": "Prof. Ethan Ethical",
       "students": [
-        "David",
-        "Eva",
-        "Frank",
-        "Grace"
+        "anna85",
+        "emelie67"
       ]
     }
   ]

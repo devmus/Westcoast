@@ -1,4 +1,4 @@
-import { navList } from './navlist.js';
+import { navList } from '../lib/navlist.js';
 
 const hamburger = document.querySelector('.hamburger');
 const navMenu2 = document.querySelector('.nav-menu');
@@ -23,8 +23,11 @@ const createFooterContent = () => {
   const footerContainer = document.querySelector('.footer-container');
   const footerDiv = document.createElement('div');
   footerContainer.appendChild(footerDiv);
-  footerDiv.innerHTML =
-    '<adress>Westcoast Wajgen 23<br>415 19<br>Götalaborg</adress><br><span>\u00A9 2023 Westcoast Education</span>';
+  footerDiv.innerHTML = `
+  <adress>Westcoasten<br>
+  415 19<br>
+  Götalaborg</adress>
+  <span>\u00A9 2023 Westcoast Education</span>`;
   footerDiv.classList.add('copy-footer');
 };
 

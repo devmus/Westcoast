@@ -1,22 +1,20 @@
-import { state, query } from '../utilities/config.js';
+import { query, state } from '../utilities/config.js';
 
-// List courses
-
-const createCourseRow = () => {
+export const createCourseRow = () => {
   const courseRow = document.createElement('section');
   courseRow.classList.add('course-row');
 
   return courseRow;
 };
 
-const createCourseContentContainer = () => {
+export const createCourseContentContainer = () => {
   const courseDiv = document.createElement('div');
   courseDiv.classList.add('course-div');
 
   return courseDiv;
 };
 
-const createCourseImg = (course) => {
+export const createCourseImg = (course) => {
   const courseImg = document.createElement('img');
   courseImg.setAttribute('src', `${course.image}`);
   const altText = course.title || 'Okänd kurs, bild saknas';
@@ -24,14 +22,14 @@ const createCourseImg = (course) => {
   return courseImg;
 };
 
-const createCourseTextContainer = () => {
+export const createCourseTextContainer = () => {
   const courseTextContainer = document.createElement('div');
   courseTextContainer.classList.add('course-text-container');
 
   return courseTextContainer;
 };
 
-const createCourseTextHeader = (course) => {
+export const createCourseTextHeader = (course) => {
   const courseTextHeader = document.createElement('h5');
   courseTextHeader.classList.add('kurstitel');
   courseTextHeader.appendChild(document.createTextNode(course.title));
@@ -39,7 +37,9 @@ const createCourseTextHeader = (course) => {
   return courseTextHeader;
 };
 
-const createCourseRowLink = (course) => {
+//
+
+export const createCourseRowLink = (course) => {
   if (state.currentPage === '/html/admin.html') {
     return createLinkAdmin(course);
   } else {
@@ -63,7 +63,9 @@ const createLinkDetails = (course) => {
   return courseLink;
 };
 
-const createCourseTextBody = (course) => {
+//
+
+export const createCourseTextBody = (course) => {
   switch (state.currentPage) {
     case '/html/aktuella.html':
       if (query.currentQuery === 'omtycktakurser') {
@@ -174,136 +176,4 @@ const listAllCoursesAdmin = (course) => {
   return bodyTextContainer;
 };
 
-export const createCourseDisplay = (courses) => {
-  courses.forEach((course) => {
-    const courseRow = createCourseRow();
-    const courseLink = createCourseRowLink(course); //STATE DEP.
-    const courseDiv = createCourseContentContainer();
-    const courseImg = createCourseImg(course); //STATE DEP.
-    const courseTextContainer = createCourseTextContainer();
-    const courseTextHeader = createCourseTextHeader(course);
-    const bodyTextContainer = createCourseTextBody(course); //STATE DEP.
-    courseTextContainer.appendChild(courseTextHeader);
-    courseTextContainer.appendChild(bodyTextContainer);
-    courseDiv.appendChild(courseTextContainer);
-    courseDiv.appendChild(courseImg);
-    courseLink.appendChild(courseDiv);
-    courseRow.appendChild(courseLink);
-    document.querySelector('.cards-container').appendChild(courseRow);
-  });
-};
-
-// Aktuella kurser
-
-const createContentHeading = (heading) => {
-  const contentHeading = document.createElement('h2');
-  contentHeading.appendChild(document.createTextNode(heading));
-  document.querySelector('.cards-container').appendChild(contentHeading);
-};
-
-const highlightButton = (query) => {
-  const buttons = Array.from(document.querySelectorAll('.button-list a'));
-
-  buttons.forEach((button) => {
-    if (button.id === query) {
-      const childElement = button.querySelector('li');
-      if (childElement) {
-        childElement.style.backgroundColor = 'rgb(188, 255, 252)';
-      }
-    }
-  });
-};
-
-export const createSortedDisplay = (courses, heading) => {
-  createContentHeading(heading);
-  highlightButton(query.currentQuery);
-  createCourseDisplay(courses);
-};
-
-//Course Details
-
-export const createCourseDetails = (course) => {
-  const anchor = document.querySelector('.cards-container');
-  const backdropContainer = document.querySelector('main');
-
-  const createBackground = document.createElement('div');
-  createBackground.classList.add('backdrop');
-  createBackground.style.backgroundImage = `url(${course.image})`;
-  const createDiv = document.createElement('div');
-  createDiv.innerText = `Kurstitel: ${course.title}\n
-  Kursnummer: ${course.number}\n
-  Beskrivning: ${course.description}\n
-  Pris: ${course.price} kr\n
-  Utbildning på distans? ${course.remote}\n
-  Omdöme: ${course.review}\n
-  Startdatum: ${course.start}\n
-  Lärare: ${course.teacher}\n`;
-
-  const createImage = document.createElement('img');
-  createImage.setAttribute('src', course.image);
-
-  backdropContainer.appendChild(createBackground);
-  anchor.appendChild(createDiv);
-};
-
-//Admin extra info
-
-export const extraInfo = (course) => {
-  const student_names = course.students.toString();
-
-  document.querySelector('#number').textContent = course.number;
-  document.querySelector('#student_names').textContent = student_names;
-  document.querySelector('#student_count').textContent = course.students.length;
-  document.querySelector('#review').textContent = course.review;
-};
-
-//Anmälan
-
-export const dropdown = (courses) => {
-  const anchor = document.querySelector('#list-title');
-  courses.forEach((course) => {
-    const option = document.createElement('option');
-    option.setAttribute('value', course.id);
-    option.setAttribute('name', course.id);
-    const optionText = document.createTextNode(course.title);
-    option.appendChild(optionText);
-    anchor.appendChild(option);
-  });
-};
-
-//Login
-
-export const userBtns = () => {
-  highlightButton(query.currentQuery);
-  if (query.currentQuery === 'regNewUser') {
-    document.querySelector('.reg-container').style.display = 'block';
-    document.querySelector('.logged-in').style.display = 'none';
-  } else {
-    document.querySelector('.login-container').style.display = 'block';
-    document.querySelector('.user').style.display = 'none';
-    document.querySelector('.logged-in').style.display = 'none';
-  }
-};
-
-export const loggedIn = () => {
-  if (!localStorage.getItem('username')) {
-    document.querySelector('.logged-in').style.display = 'none';
-  } else {
-    document.querySelector('.logged-in').style.display = 'block';
-    document.querySelector('.not-logged').style.display = 'none';
-    document.querySelector(
-      '#logout'
-    ).textContent = `Logga ut ${localStorage.getItem('username')}`;
-  }
-};
-
-// Students info
-
-export const studentInfo = (student) => {
-  document.querySelector(
-    '#fullname'
-  ).textContent = `${student.firstname} ${student.lastname}`;
-  document.querySelector('#address').textContent = student.adress;
-  document.querySelector('#email').textContent = student.email;
-  document.querySelector('#mobil').textContent = student.phone;
-};
+//

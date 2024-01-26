@@ -1,8 +1,7 @@
 .footer-container{
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
+
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -11,5 +10,17 @@
 }
 
 .copy-footer{
+  width: 100%;
   color: black;
+  display: flex;
+  justify-content: space-between;
+  align-content: end;
+  align-items: flex-end;
+
+
+  span{
+    display: block;
+
+    
+  }
 }
