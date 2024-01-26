@@ -11,7 +11,7 @@ import {
   studentInfo,
 } from '../dom/domManager.js';
 import AppManager from '../App/AppManager.js';
-import { rankCourses, popCourses, startCourses } from '../lib/sorting.js';
+import { rankCourses, popCourses, startCourses } from './sorting.js';
 
 const initApp = async () => {
   initDOM();
