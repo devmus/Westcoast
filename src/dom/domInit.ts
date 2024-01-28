@@ -1,10 +1,10 @@
 import { navList } from '../lib/navlist.js';
 
-const hamburger = document.querySelector('.hamburger');
-const navMenu2 = document.querySelector('.nav-menu');
+const hamburger = document.querySelector<HTMLDivElement>('.hamburger')!;
+const menu = document.querySelector<HTMLUListElement>('.nav-menu')!;
+const userDisplay = document.querySelector<HTMLDivElement>('.user')!;
 
 const navMenu = () => {
-  const menu = document.querySelector('.nav-menu');
 
   navList.forEach(({ text, href, type }) => {
     const createLink = document.createElement('a');
@@ -20,7 +20,7 @@ const navMenu = () => {
 };
 
 const createFooterContent = () => {
-  const footerContainer = document.querySelector('.footer-container');
+  const footerContainer = document.querySelector<HTMLDivElement>('.footer-container')!;
   const footerDiv = document.createElement('div');
   footerContainer.appendChild(footerDiv);
   footerDiv.innerHTML = `
@@ -33,22 +33,22 @@ const createFooterContent = () => {
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
-  navMenu2.classList.toggle('active');
+  menu.classList.toggle('active');
 });
 
 document.querySelectorAll('.nav-link').forEach((n) =>
   n.addEventListener('click', () => {
     hamburger.classList.remove('active');
-    navMenu2.classList.remove('active');
+    menu.classList.remove('active');
   })
 );
 
 const user = () => {
   if (!localStorage.getItem('username')) {
-    document.querySelector('.user').style.display = 'none';
+    userDisplay.style.display = 'none';
   } else {
-    document.querySelector('.user').style.display = 'block';
-    document.querySelector('.user').textContent = `Hej ${localStorage.getItem(
+    userDisplay.style.display = 'block';
+    userDisplay.textContent = `Hej ${localStorage.getItem(
       'username'
     )}!`;
   }

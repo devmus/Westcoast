@@ -1,3 +1,4 @@
+import { Courses } from '../models/CourseModel.js';
 import { query, state } from '../utilities/config.js';
 
 export const createCourseRow = () => {
@@ -14,7 +15,7 @@ export const createCourseContentContainer = () => {
   return courseDiv;
 };
 
-export const createCourseImg = (course) => {
+export const createCourseImg = (course: Courses) => {
   const courseImg = document.createElement('img');
   courseImg.setAttribute('src', `${course.image}`);
   const altText = course.title || 'Okänd kurs, bild saknas';
@@ -29,7 +30,7 @@ export const createCourseTextContainer = () => {
   return courseTextContainer;
 };
 
-export const createCourseTextHeader = (course) => {
+export const createCourseTextHeader = (course: Courses) => {
   const courseTextHeader = document.createElement('h5');
   courseTextHeader.classList.add('kurstitel');
   courseTextHeader.appendChild(document.createTextNode(course.title));
@@ -39,35 +40,35 @@ export const createCourseTextHeader = (course) => {
 
 //
 
-export const createCourseRowLink = (course) => {
-  if (state.currentPage === '/html/admin.html') {
+export const createCourseRowLink = (course: Courses) => {
+  if (state.currentPage === '/src/html/admin.html') {
     return createLinkAdmin(course);
   } else {
     return createLinkDetails(course);
   }
 };
 
-const createLinkAdmin = (course) => {
+const createLinkAdmin = (course: Courses) => {
   const courseLink = document.createElement('a');
   courseLink.classList.add('course-link');
-  courseLink.href = `../html/admin-edit.html?id=${course.id}`;
+  courseLink.href = `/src/html/admin-edit.html?id=${course.id}`;
 
   return courseLink;
 };
 
-const createLinkDetails = (course) => {
+const createLinkDetails = (course: Courses) => {
   const courseLink = document.createElement('a');
   courseLink.classList.add('course-link');
-  courseLink.href = `../html/coursedetails.html?id=${course.id}`;
+  courseLink.href = `/src/html/coursedetails.html?id=${course.id}`;
 
   return courseLink;
 };
 
 //
 
-export const createCourseTextBody = (course) => {
+export const createCourseTextBody = (course: Courses) => {
   switch (state.currentPage) {
-    case '/html/aktuella.html':
+    case '/src/html/aktuella.html':
       if (query.currentQuery === 'omtycktakurser') {
         return listBestCourses(course);
       } else if (query.currentQuery === 'kursstart') {
@@ -76,17 +77,17 @@ export const createCourseTextBody = (course) => {
         return listPopularCourses(course);
       }
       break;
-    case '/html/allcourses.html':
-    case '/html/minasidor.html':
+    case '/src/html/allcourses.html':
+    case '/src/html/minasidor.html':
       return listAllCourses(course);
       break;
-    case '/html/admin.html':
+    case '/src/html/admin.html':
       return listAllCoursesAdmin(course);
       break;
   }
 };
 
-const listBestCourses = (course) => {
+const listBestCourses = (course: Courses) => {
   const category = 'best';
   const bodyTextContainer = document.createElement('div');
   bodyTextContainer.classList.add(
@@ -106,7 +107,7 @@ const listBestCourses = (course) => {
   return bodyTextContainer;
 };
 
-const listStartCourses = (course) => {
+const listStartCourses = (course: Courses) => {
   const textBody = document.createElement('smalltext');
   textBody.classList.add('kurs-text');
   textBody.appendChild(
@@ -115,7 +116,7 @@ const listStartCourses = (course) => {
   return textBody;
 };
 
-const listPopularCourses = (course) => {
+const listPopularCourses = (course: Courses) => {
   const category = 'pop';
   const bodyTextContainer = document.createElement('div');
   bodyTextContainer.classList.add(
@@ -133,7 +134,7 @@ const listPopularCourses = (course) => {
   return bodyTextContainer;
 };
 
-const listAllCourses = (course) => {
+const listAllCourses = (course: Courses) => {
   const category = 'all';
   const bodyTextContainer = document.createElement('div');
   bodyTextContainer.classList.add(
@@ -151,7 +152,7 @@ const listAllCourses = (course) => {
   return bodyTextContainer;
 };
 
-const listAllCoursesAdmin = (course) => {
+const listAllCoursesAdmin = (course: Courses) => {
   const category = 'all';
   const bodyTextContainer = document.createElement('div');
   bodyTextContainer.classList.add(

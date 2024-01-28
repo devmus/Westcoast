@@ -1,18 +1,20 @@
+import { Courses } from '../models/CourseModel.js';
+import { Students } from '../models/StudentModel.js';
 import { settings } from '../utilities/config.js';
 
-class HttpClient {
+export class HttpClient {
   #url = '';
-  constructor(url) {
-    this.#url = url;
+  constructor(url?: string) {
+    this.#url = url || "";
   }
 
-  async get(resource) {
+  async get(resource: string): Promise<[Courses] | [Students] | Courses | Students> {
     try {
       this.#url = `${settings.BASE_URL}/${resource}/`;
       const response = await fetch(this.#url);
 
       if (response.ok) {
-        const result = await response.json();
+        const result = await response.json();     
         return result;
       } else {
         throw new Error(`${response.status} ${response.statusText}`);
@@ -22,7 +24,7 @@ class HttpClient {
     }
   }
 
-  async add(data) {
+  async add(data: Courses | Students): Promise<Courses | Students> {
     try {
       const response = await fetch(this.#url, {
         method: 'POST',
@@ -36,7 +38,7 @@ class HttpClient {
         const result = await response.json();
         return result;
       } else {
-        throw new Error(`${response.status} ${response.stautsText}`);
+        throw new Error(`${response.status} ${response.statusText}`);
       }
     } catch (error) {
       throw new Error(`Ett fel inträffade i add metoden: ${error}`);
@@ -45,7 +47,7 @@ class HttpClient {
 
   async delete() {
     try {
-      const response = await fetch(this.#url, {
+      await fetch(this.#url, {
         method: 'DELETE',
       });
     } catch (error) {
@@ -53,7 +55,7 @@ class HttpClient {
     }
   }
 
-  async update(data) {
+  async update(data: Courses | Students): Promise<Courses | Students>{
     try {
       const response = await fetch(this.#url, {
         method: 'PUT',
@@ -67,12 +69,10 @@ class HttpClient {
         const result = await response.json();
         return result;
       } else {
-        throw new Error(`${response.status} ${response.stautsText}`);
+        throw new Error(`${response.status} ${response.statusText}`);
       }
     } catch (error) {
       throw new Error(`Ett fel inträffade i update metoden: ${error}`);
     }
   }
 }
-
-export { HttpClient };
