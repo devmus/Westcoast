@@ -69,7 +69,7 @@ const allcourses = async (): Promise<void> => {
 };
 
 const courseDetails = async (): Promise<void> => {
-  const id: number = parseInt(location.search.split('=')[1]);
+  const id: string = location.search.split('=')[1];
   const course: Courses = await new AppManager().courseDetails(id);
   createCourseDetails(course as Courses) as void;
 };
@@ -77,26 +77,26 @@ const courseDetails = async (): Promise<void> => {
 const listPopularCourses = async (): Promise<void> => {
   const heading: string = 'Mest populära kurser!';
   const courses: [Courses] = await new AppManager().getAllCourses();
-  const sortedCourses: [Courses] = popCourses(courses);
+  const sortedCourses: Courses[] = popCourses(courses);
   createSortedDisplay(sortedCourses as [Courses], heading as string) as void;
 };
 
 const listBestCourses = async (): Promise<void> => {
   const heading: string = 'Kurser med högst omdöme!';
   const courses: [Courses] = await new AppManager().getAllCourses();
-  const sortedCourses: [Courses] = rankCourses(courses);
+  const sortedCourses: Courses[] = rankCourses(courses);
   createSortedDisplay(sortedCourses as [Courses], heading as string) as void;
 };
 
 const listStartCourses = async (): Promise<void> => {
   const heading: string = 'Kurser som startar snart!';
   const courses: [Courses] = await new AppManager().getAllCourses();
-  const sortedCourses: [Courses] = startCourses(courses);
+  const sortedCourses: Courses[] = startCourses(courses);
   createSortedDisplay(sortedCourses as [Courses], heading as string) as void;
 };
 
 const courseEdit = async (): Promise<void> => {
-  const id: number = parseInt(location.search.split('=')[1]);
+  const id: string = location.search.split('=')[1];
   const deleteButton: HTMLButtonElement = document.querySelector<HTMLButtonElement>('#delete')!;
   const form: HTMLFormElement = document.querySelector<HTMLFormElement>('#updateCourseForm')!;
   const course: Courses = await new AppManager().courseDetails(id);

@@ -34,7 +34,7 @@ export default class AppManager {
             const url = 'http://localhost:3000/courses';
             const http = new HttpClient(url);
             await http.add(course);
-            location.href = './admin.html';
+            // location.href = './admin.html';
         };
         this.regUser = async (e, form) => {
             e.preventDefault();

@@ -66,7 +66,7 @@ const createLinkDetails = (course: Courses) => {
 
 //
 
-export const createCourseTextBody = (course: Courses) => {
+export const createCourseTextBody = (course: Courses): HTMLElement => {
   switch (state.currentPage) {
     case '/src/html/aktuella.html':
       if (query.currentQuery === 'omtycktakurser') {
@@ -84,6 +84,8 @@ export const createCourseTextBody = (course: Courses) => {
     case '/src/html/admin.html':
       return listAllCoursesAdmin(course);
       break;
+      default:
+        return listAllCourses(course);
   }
 };
 

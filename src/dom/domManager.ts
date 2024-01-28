@@ -1,3 +1,5 @@
+import { Courses } from '../models/CourseModel.js';
+import { Students } from '../models/StudentModel.js';
 import { query } from '../utilities/config.js';
 import {
   createCourseRow,
@@ -9,7 +11,10 @@ import {
   createCourseTextBody,
 } from './coursedisplay.js';
 
-export const createCourseDisplay = (courses) => {
+const mainAnchor = document.querySelector<HTMLDivElement>('.cards-container')!;
+
+
+export const createCourseDisplay = (courses: Courses[]) => {
   courses.forEach((course) => {
     const courseRow = createCourseRow();
     const courseLink = createCourseRowLink(course);
@@ -24,19 +29,19 @@ export const createCourseDisplay = (courses) => {
     courseDiv.appendChild(courseImg);
     courseLink.appendChild(courseDiv);
     courseRow.appendChild(courseLink);
-    document.querySelector('.cards-container').appendChild(courseRow);
+    mainAnchor.appendChild(courseRow);
   });
 };
 
 // Aktuella kurser
 
-const createContentHeading = (heading) => {
+const createContentHeading = (heading: string): void => {
   const contentHeading = document.createElement('h2');
   contentHeading.appendChild(document.createTextNode(heading));
-  document.querySelector('.cards-container').appendChild(contentHeading);
+  mainAnchor.appendChild(contentHeading);
 };
 
-const highlightButton = (query) => {
+const highlightButton = (query: string): void => {
   const buttons = Array.from(document.querySelectorAll('.button-list a'));
 
   buttons.forEach((button) => {
@@ -49,17 +54,16 @@ const highlightButton = (query) => {
   });
 };
 
-export const createSortedDisplay = (courses, heading) => {
-  createContentHeading(heading);
-  highlightButton(query.currentQuery);
-  createCourseDisplay(courses);
+export const createSortedDisplay = (courses: [Courses], heading: string): void => {
+  createContentHeading(heading as string) as void;
+  highlightButton(query.currentQuery as string) as void;
+  createCourseDisplay(courses as [Courses]) as void;
 };
 
 //Course Details
 
-export const createCourseDetails = (course) => {
-  const anchor = document.querySelector('.cards-container');
-  const backdropContainer = document.querySelector('main');
+export const createCourseDetails = (course: Courses): void => {
+  const backdropContainer = document.querySelector<HTMLElement>('main')!;
   const createBackground = document.createElement('div');
   createBackground.classList.add('backdrop');
   createBackground.style.backgroundImage = `url(${course.image})`;
@@ -75,16 +79,18 @@ export const createCourseDetails = (course) => {
   const createImage = document.createElement('img');
   createImage.setAttribute('src', course.image);
   backdropContainer.appendChild(createBackground);
-  anchor.appendChild(createDiv);
+  mainAnchor.appendChild(createDiv);
 
-  const remote = document.querySelector('#remote li');
-  const classroom = document.querySelector('#classroom li');
+  const remote = document.querySelector<HTMLLIElement>('#remote li')!;
+  const classroom = document.querySelector<HTMLLIElement>('#classroom li')!;
+  const remoteParent = document.querySelector<HTMLLinkElement>('#remote')!;
+  const classroomParent = document.querySelector<HTMLLinkElement>('#classroom')!;
 
-  remote.parentElement.setAttribute(
+  remoteParent.setAttribute(
     'href',
     `../html/enroll.html?id=${course.id}`
   );
-  classroom.parentElement.setAttribute(
+  classroomParent.setAttribute(
     'href',
     `../html/enroll.html?id=${course.id}`
   );
@@ -97,7 +103,7 @@ export const createCourseDetails = (course) => {
     remote.addEventListener('mouseout', function () {
       remote.style.backgroundColor = 'rgb(246, 250, 211)';
     });
-    classroom.parentElement.style.pointerEvents = 'none';
+    classroomParent.style.pointerEvents = 'none';
   } else {
     classroom.style.backgroundColor = 'rgb(246, 250, 211)';
     classroom.addEventListener('mouseover', function () {
@@ -106,74 +112,84 @@ export const createCourseDetails = (course) => {
     classroom.addEventListener('mouseout', function () {
       classroom.style.backgroundColor = 'rgb(246, 250, 211)';
     });
-    remote.parentElement.style.pointerEvents = 'none';
+    remoteParent.style.pointerEvents = 'none';
   }
 };
 
 //Admin extra info
 
-export const extraInfo = (course) => {
+export const extraInfo = (course: Courses) => {
   const student_names = course.students.toString();
-
-  document.querySelector('#number').textContent = course.number;
-  document.querySelector('#student_names').textContent = student_names;
-  document.querySelector('#student_count').textContent = course.students.length;
-  document.querySelector('#review').textContent = course.review;
+  document.querySelector<HTMLDivElement>('#number')!.textContent = course.number;
+  document.querySelector<HTMLDivElement>('#student_names')!.textContent = student_names;
+  document.querySelector<HTMLDivElement>('#student_count')!.textContent = course.students.length.toString();
+  document.querySelector<HTMLDivElement>('#review')!.textContent = course.review.toString();
 };
 
 //Anmälan
 
-export const dropdown = (courses) => {
-  const anchor = document.querySelector('#list-title');
-  courses.forEach((course) => {
-    const option = document.createElement('option');
-    option.setAttribute('value', course.id);
-    option.setAttribute('name', course.id);
+export const dropdown = (courses: [Courses]) => {
+  const anchor = document.querySelector<HTMLSelectElement>('#list-title')!;
+  courses.forEach((course: Courses) => {
+    const option = document.createElement('option')!;
+    option.setAttribute('value', course.id.toString());
+    option.setAttribute('name', course.id.toString());
     const optionText = document.createTextNode(course.title);
     option.appendChild(optionText);
     anchor.appendChild(option);
   });
+  const queryNumber = parseInt(query.currentQuery)
 
-  if (query.currentQuery > 0) {
+  if (queryNumber > 0) {
     const optionValue = query.currentQuery;
-    const option = anchor.querySelector(`option[value="${optionValue}"]`);
-    option.selected = true;
+    const option = anchor.querySelector(`option[value="${optionValue}"]`) as HTMLOptionElement;
+    if (option){
+      option.selected = true;
+    }
+    
   }
 };
 
 //Login
 
+const regContainer = document.querySelector<HTMLDivElement>('.reg-container')!;
+const loginContainer = document.querySelector<HTMLDivElement>('.login-container')!;
+const loggedContainer = document.querySelector<HTMLDivElement>('.logged-in')!;
+const notLoggedContainer = document.querySelector<HTMLDivElement>('.not-logged')!;
+const userDisplay = document.querySelector<HTMLDivElement>('.user')!;
+
 export const userBtns = () => {
+
   highlightButton(query.currentQuery);
   if (query.currentQuery === 'regNewUser') {
-    document.querySelector('.reg-container').style.display = 'block';
-    document.querySelector('.logged-in').style.display = 'none';
+    regContainer.style.display = 'block';
+    loggedContainer.style.display = 'none';
   } else {
-    document.querySelector('.login-container').style.display = 'block';
-    document.querySelector('.user').style.display = 'none';
-    document.querySelector('.logged-in').style.display = 'none';
+    loginContainer.style.display = 'block';
+    userDisplay.style.display = 'none';
+    loggedContainer.style.display = 'none';
   }
 };
 
 export const loggedIn = () => {
   if (!localStorage.getItem('username')) {
-    document.querySelector('.logged-in').style.display = 'none';
+    loggedContainer.style.display = 'none';
   } else {
-    document.querySelector('.logged-in').style.display = 'block';
-    document.querySelector('.not-logged').style.display = 'none';
-    document.querySelector(
+    loggedContainer.style.display = 'block';
+    notLoggedContainer.style.display = 'none';
+    document.querySelector<HTMLLIElement>(
       '#logout'
-    ).textContent = `Logga ut ${localStorage.getItem('username')}`;
+    )!.textContent = `Logga ut ${localStorage.getItem('username')}`;
   }
 };
 
 // Students info
 
-export const studentInfo = (student) => {
-  document.querySelector(
+export const studentInfo = (student: Students) => {
+  document.querySelector<HTMLSpanElement>(
     '#fullname'
-  ).textContent = `${student.firstname} ${student.lastname}`;
-  document.querySelector('#address').textContent = student.adress;
-  document.querySelector('#email').textContent = student.email;
-  document.querySelector('#mobil').textContent = student.phone;
+  )!.textContent = `${student.firstname} ${student.lastname}`;
+  document.querySelector<HTMLSpanElement>('#address')!.textContent = student.adress;
+  document.querySelector<HTMLSpanElement>('#email')!.textContent = student.email;
+  document.querySelector<HTMLSpanElement>('#mobil')!.textContent = student.phone;
 };

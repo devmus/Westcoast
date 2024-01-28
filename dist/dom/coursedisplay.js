@@ -69,6 +69,8 @@ export const createCourseTextBody = (course) => {
         case '/src/html/admin.html':
             return listAllCoursesAdmin(course);
             break;
+        default:
+            return listAllCourses(course);
     }
 };
 const listBestCourses = (course) => {

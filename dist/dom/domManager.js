@@ -1,5 +1,6 @@
 import { query } from '../utilities/config.js';
 import { createCourseRow, createCourseContentContainer, createCourseImg, createCourseTextContainer, createCourseTextHeader, createCourseRowLink, createCourseTextBody, } from './coursedisplay.js';
+const mainAnchor = document.querySelector('.cards-container');
 export const createCourseDisplay = (courses) => {
     courses.forEach((course) => {
         const courseRow = createCourseRow();
@@ -15,14 +16,14 @@ export const createCourseDisplay = (courses) => {
         courseDiv.appendChild(courseImg);
         courseLink.appendChild(courseDiv);
         courseRow.appendChild(courseLink);
-        document.querySelector('.cards-container').appendChild(courseRow);
+        mainAnchor.appendChild(courseRow);
     });
 };
 // Aktuella kurser
 const createContentHeading = (heading) => {
     const contentHeading = document.createElement('h2');
     contentHeading.appendChild(document.createTextNode(heading));
-    document.querySelector('.cards-container').appendChild(contentHeading);
+    mainAnchor.appendChild(contentHeading);
 };
 const highlightButton = (query) => {
     const buttons = Array.from(document.querySelectorAll('.button-list a'));
@@ -42,7 +43,6 @@ export const createSortedDisplay = (courses, heading) => {
 };
 //Course Details
 export const createCourseDetails = (course) => {
-    const anchor = document.querySelector('.cards-container');
     const backdropContainer = document.querySelector('main');
     const createBackground = document.createElement('div');
     createBackground.classList.add('backdrop');
@@ -59,11 +59,13 @@ export const createCourseDetails = (course) => {
     const createImage = document.createElement('img');
     createImage.setAttribute('src', course.image);
     backdropContainer.appendChild(createBackground);
-    anchor.appendChild(createDiv);
+    mainAnchor.appendChild(createDiv);
     const remote = document.querySelector('#remote li');
     const classroom = document.querySelector('#classroom li');
-    remote.parentElement.setAttribute('href', `../html/enroll.html?id=${course.id}`);
-    classroom.parentElement.setAttribute('href', `../html/enroll.html?id=${course.id}`);
+    const remoteParent = document.querySelector('#remote');
+    const classroomParent = document.querySelector('#classroom');
+    remoteParent.setAttribute('href', `../html/enroll.html?id=${course.id}`);
+    classroomParent.setAttribute('href', `../html/enroll.html?id=${course.id}`);
     if (course.remote === true && 'true') {
         remote.style.backgroundColor = 'rgb(246, 250, 211)';
         remote.addEventListener('mouseover', function () {
@@ -72,7 +74,7 @@ export const createCourseDetails = (course) => {
         remote.addEventListener('mouseout', function () {
             remote.style.backgroundColor = 'rgb(246, 250, 211)';
         });
-        classroom.parentElement.style.pointerEvents = 'none';
+        classroomParent.style.pointerEvents = 'none';
     }
     else {
         classroom.style.backgroundColor = 'rgb(246, 250, 211)';
@@ -82,7 +84,7 @@ export const createCourseDetails = (course) => {
         classroom.addEventListener('mouseout', function () {
             classroom.style.backgroundColor = 'rgb(246, 250, 211)';
         });
-        remote.parentElement.style.pointerEvents = 'none';
+        remoteParent.style.pointerEvents = 'none';
     }
 };
 //Admin extra info
@@ -90,46 +92,54 @@ export const extraInfo = (course) => {
     const student_names = course.students.toString();
     document.querySelector('#number').textContent = course.number;
     document.querySelector('#student_names').textContent = student_names;
-    document.querySelector('#student_count').textContent = course.students.length;
-    document.querySelector('#review').textContent = course.review;
+    document.querySelector('#student_count').textContent = course.students.length.toString();
+    document.querySelector('#review').textContent = course.review.toString();
 };
 //Anmälan
 export const dropdown = (courses) => {
     const anchor = document.querySelector('#list-title');
     courses.forEach((course) => {
         const option = document.createElement('option');
-        option.setAttribute('value', course.id);
-        option.setAttribute('name', course.id);
+        option.setAttribute('value', course.id.toString());
+        option.setAttribute('name', course.id.toString());
         const optionText = document.createTextNode(course.title);
         option.appendChild(optionText);
         anchor.appendChild(option);
     });
-    if (query.currentQuery > 0) {
+    const queryNumber = parseInt(query.currentQuery);
+    if (queryNumber > 0) {
         const optionValue = query.currentQuery;
         const option = anchor.querySelector(`option[value="${optionValue}"]`);
-        option.selected = true;
+        if (option) {
+            option.selected = true;
+        }
     }
 };
 //Login
+const regContainer = document.querySelector('.reg-container');
+const loginContainer = document.querySelector('.login-container');
+const loggedContainer = document.querySelector('.logged-in');
+const notLoggedContainer = document.querySelector('.not-logged');
+const userDisplay = document.querySelector('.user');
 export const userBtns = () => {
     highlightButton(query.currentQuery);
     if (query.currentQuery === 'regNewUser') {
-        document.querySelector('.reg-container').style.display = 'block';
-        document.querySelector('.logged-in').style.display = 'none';
+        regContainer.style.display = 'block';
+        loggedContainer.style.display = 'none';
     }
     else {
-        document.querySelector('.login-container').style.display = 'block';
-        document.querySelector('.user').style.display = 'none';
-        document.querySelector('.logged-in').style.display = 'none';
+        loginContainer.style.display = 'block';
+        userDisplay.style.display = 'none';
+        loggedContainer.style.display = 'none';
     }
 };
 export const loggedIn = () => {
     if (!localStorage.getItem('username')) {
-        document.querySelector('.logged-in').style.display = 'none';
+        loggedContainer.style.display = 'none';
     }
     else {
-        document.querySelector('.logged-in').style.display = 'block';
-        document.querySelector('.not-logged').style.display = 'none';
+        loggedContainer.style.display = 'block';
+        notLoggedContainer.style.display = 'none';
         document.querySelector('#logout').textContent = `Logga ut ${localStorage.getItem('username')}`;
     }
 };

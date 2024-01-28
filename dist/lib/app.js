@@ -59,7 +59,7 @@ const allcourses = async () => {
     createCourseDisplay(courses);
 };
 const courseDetails = async () => {
-    const id = parseInt(location.search.split('=')[1]);
+    const id = location.search.split('=')[1];
     const course = await new AppManager().courseDetails(id);
     createCourseDetails(course);
 };
@@ -82,7 +82,7 @@ const listStartCourses = async () => {
     createSortedDisplay(sortedCourses, heading);
 };
 const courseEdit = async () => {
-    const id = parseInt(location.search.split('=')[1]);
+    const id = location.search.split('=')[1];
     const deleteButton = document.querySelector('#delete');
     const form = document.querySelector('#updateCourseForm');
     const course = await new AppManager().courseDetails(id);
