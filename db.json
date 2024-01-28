@@ -94,7 +94,7 @@
       "description": "Create cross-platform mobile applications using React Native. Explore UI/UX design and app deployment.",
       "days": "60 dagar",
       "start": "2024-02-18",
-      "price": 110,
+      "price": 120,
       "remote": "false",
       "image": "../assets/images/kursbilder/5.jpg",
       "teacher": "Dr. Jessica Mobileson"
@@ -115,20 +115,20 @@
     },
     {
       "id": 3,
-      "title": "Data Science Essentials",
-      "description": "Explore the foundations of data science, including statistical analysis, machine learning, and data visualization.",
-      "review": 4.8,
-      "days": "50 dagar",
-      "start": "2024-04-01",
-      "price": 120,
-      "number": "AB2022Data",
-      "remote": true,
-      "image": "../assets/images/kursbilder/3.jpg",
-      "teacher": "Dr. Alex Data",
+      "review": 4,
       "students": [
         "erik76",
         "maja27"
-      ]
+      ],
+      "number": "AB2022Data",
+      "title": "Data Science Essentials",
+      "description": "Explore the foundations of data science, including statistical analysis, machine learning, and data visualization.",
+      "days": "50 dagar",
+      "start": "2024-04-01",
+      "price": 120,
+      "remote": "true",
+      "image": "../assets/images/kursbilder/3.jpg",
+      "teacher": "Dr. Alex Data"
     },
     {
       "id": 4,
@@ -371,7 +371,8 @@
       "image": "../assets/images/kursbilder/18.jpg",
       "teacher": "Dr. Full Stack",
       "students": [
-        "sofia17"
+        "sofia17",
+        "anna85"
       ]
     },
     {
@@ -387,7 +388,8 @@
       "image": "../assets/images/kursbilder/22.jpg",
       "teacher": "Prof. Barry Blockchain",
       "students": [
-        "hugo90"
+        "hugo90",
+        "anna85"
       ]
     },
     {

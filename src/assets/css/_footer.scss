@@ -1,0 +1,26 @@
+.footer-container{
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid black;
+  background-color: $primary-color;
+}
+
+.copy-footer{
+  width: 100%;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-content: end;
+  align-items: flex-end;
+
+
+  span{
+    display: block;
+
+    
+  }
+}

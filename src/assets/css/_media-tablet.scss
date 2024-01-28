@@ -1,0 +1,92 @@
+//******************* Basics *******************//
+
+header{
+  height: $header_t;
+}
+
+//******************* Header *******************//
+
+.logo-container h1,
+.user{
+      font-size: 1.5rem;
+}
+
+
+.header-right{
+
+  .nav-menu{
+      margin-top: calc($header_d * 2);
+
+      li{
+        font-size: 1.5rem;
+      }
+  }
+}
+
+//******************** Main ********************//
+
+.cards-content{
+
+  .cards-container{
+    width: calc(80% + 3rem);
+    margin: 2rem;
+
+    h2{
+      font-size: 2rem;
+    }
+
+    .course-row{
+
+      .course-div{
+
+        .course-text-container{
+          
+          .kurstitel{
+            font-size: 2rem;
+          }
+
+          .kurs-body-text-container{
+
+            .kurs-text{
+              font-size: 2rem;
+              line-height: 10rem;
+            }
+
+            .kurs-text-best{
+              width: 10rem;
+              height: 10rem;
+              font-size: 5rem;
+              line-height: 10rem;
+            }
+        }
+        .kurs-body-text-pop{
+
+
+          .kurs-text-pop{
+            font-size: 2rem;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+          }
+      }
+    }
+        img{
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+.main-content{
+  flex-direction: row;
+  justify-content: center;
+
+  section{
+    width: calc(40vw);
+
+    h2{
+      font-size: 2rem;
+    }
+  }
+}

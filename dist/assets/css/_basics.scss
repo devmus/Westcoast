@@ -1,0 +1,60 @@
+//Variabler
+$primary-color: rgb(246, 250, 211);
+$secondary-color: rgb(227, 228, 216);
+$tertiary-color: rgb(188, 255, 252);
+$border-color: rgb(58, 58, 58);
+$transparent-color: rgba(0,0,0,0.6);
+$transparent-color-light: rgba(0,0,0,0.3);
+$transparent-color-discover: rgba(145, 83, 83, 0.9);
+$warning-color: rgba(255, 133, 133, 1);
+$font-color: white;
+$font-color-discover: rgb(255, 252, 91);
+
+$header_m: 62px;
+$header_t: 72px;
+$header_d: 81px;
+
+//Mixins
+@mixin ovalshape() {
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid $border-color;
+  border-radius: 50px;
+  text-align: center;
+}
+
+//Övrigt
+*{
+  font-family: Inter;
+}
+
+header{
+  height: $header_m;
+}
+
+body{
+  min-height: 100vh;
+  background-image: url("../images/background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+footer{
+  height: 80px;
+}
+
+a{
+  cursor: pointer;
+}
+
+.background-transparent{
+  background-color: $transparent-color-light;
+}

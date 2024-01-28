@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Miltonian+Tattoo&display=swap" rel="stylesheet">
+  <title>Westcoast Education - Mina sidor</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
+  <link href="../assets/css/site.min.css" rel="stylesheet">
+  <script src="/../dist/lib/app.js" type="module" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="../index.html">
+        <div class="logo-container">
+          <h1>Westcoast Eduction</h1>
+        </div>
+      </a>
+      <a href="../html/minasidor.html">
+        <div class="user" style="display: none"></div>
+      </a>
+      <div class="header-right">
+        <nav class="navbar">
+          <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-item">
+                <h2>Meny</h2>
+                <!--Meny här-->
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="mina-links not-logged">
+      <ul class="button-list">
+        <a href="./minasidor.html?page=regNewUser" id="regNewUser"><li class="mina-btn">Registrera dig</li></a>
+        <a href="./minasidor.html?page=logOldUser" id="logOldUser"><li class="mina-btn">Logga in</li></a>
+      </ul>
+    </div>
+    <div class="mina-links logged-in" style="display: none">
+      <ul class="button-list">
+        <a href="./minasidor.html?page=logOldUser"><li class="mina-btn" id="logout">Logga ut</li></a>
+      </ul>
+    </div>
+    <article class="cards-content">
+      <div class="cards-container">
+        <h2>Mina sidor</h2>
+        <div class="reg-container" style="display: none">
+          <h3>Registrera dig</h3>
+          <form id="regForm">
+            <div class="form-control">
+              <label for="firstname">Förnamn</label>
+              <input type="text" name="firstname" placeholder="Förnamn"></input>
+            </div>
+            <div class="form-control">
+              <label for="lastname">Efternamn</label>
+              <input type="text" name="lastname" placeholder="Efternamn"></input>
+            </div>
+            <div class="form-control">
+              <label for="adress">Adress</label>
+              <input type="text" name="adress" placeholder="Adress"></input>
+            </div>
+            <div class="form-control">
+              <label for="email">E-mail</label>
+              <input type="text" name="email" placeholder="E-mail"></input>
+            </div>
+            <div class="form-control">
+              <label for="phone">Telefon</label>
+              <input type="text" name="phone" placeholder="Telefon"></input>
+            </div>
+            <div class="form-control">
+              <button type="submit" class="btn">Registrera dig</button>
+            </div>
+          </form>
+        </div>
+        <div class="login-container" style="display: none">
+          <h3>Logga in</h3>
+          <form id="loginForm">
+            <div class="form-control">
+              <label for="username">Namn</label>
+              <input type="text" name="username" placeholder="Username"></input>
+            </div>
+            <div class="form-control">
+              <button type="submit" class="btn">Log in</button>
+            </div>
+          </form>
+        </div>
+        <div class="mina-kurser-container" style="display: none">
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <div class="footer-container"></div>
+  </footer>
+</body>
+</html>

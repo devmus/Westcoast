@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "json-server": "^0.17.4"
-  }
+  },
+  "name": "westcoast",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
