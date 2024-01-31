@@ -60,7 +60,7 @@ export default class AppManager {
     const url: string = 'http://localhost:3000/courses';
     const http: HttpClient = new HttpClient(url);
     await http.add(course as Courses);
-    // location.href = './admin.html';
+    location.href = './admin.html';
   };
 
   regUser = async (e: Event, form: HTMLFormElement): Promise<void> => {
